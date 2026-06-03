@@ -75,11 +75,200 @@
         </section>
 
         <nav class="tabs" aria-label="보기 전환">
+          <button type="button" data-view="cue-view">큐시트</button>
           <button type="button" class="active" data-view="script-view">전체 대본</button>
           <button type="button" data-view="questions-view">질문 카드</button>
           <button type="button" data-view="run-view">진행표</button>
           <button type="button" data-view="check-view">확인</button>
         </nav>
+
+        <section id="cue-view" class="view cue-view" aria-label="큐시트" hidden>
+          <article class="cue-sheet">
+            <header class="cue-title">
+              <h3>[큐시트] 주제토크방송</h3>
+              <p>전주공동체라디오 <strong>93.5MHz</strong></p>
+            </header>
+
+            <table class="cue-meta" aria-label="큐시트 기본 정보">
+              <tbody>
+                <tr>
+                  <th>프로그램명</th>
+                  <td>라이딩스타(만경강 라이딩과 건강한 삶)</td>
+                </tr>
+                <tr>
+                  <th>진행</th>
+                  <td>스칼렛, 윌리엄</td>
+                </tr>
+                <tr>
+                  <th>출연</th>
+                  <td>닉네임</td>
+                </tr>
+                <tr>
+                  <th>녹음장소</th>
+                  <td>방송실</td>
+                </tr>
+                <tr>
+                  <th>녹음일시</th>
+                  <td>2026년 6월 5일</td>
+                </tr>
+                <tr>
+                  <th>방송일시</th>
+                  <td>2026년 6월 5일 19시</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="cue-table" aria-label="큐시트 진행 흐름">
+              <thead>
+                <tr>
+                  <th>구성</th>
+                  <th>시간</th>
+                  <th>세부사항</th>
+                  <th>출연</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>오프닝</strong><small>초여름 문턱</small></td>
+                  <td>0~6분<br /><span>(6')</span></td>
+                  <td>
+                    <ul>
+                      <li>시그널 뮤직 후 진행자 인사</li>
+                      <li>6월 첫 금요일 저녁, 초여름 라이딩 분위기 소개</li>
+                      <li>더위와 갑작스러운 비를 챙겨야 하는 시기 안내</li>
+                      <li>오늘의 게스트와 핵심 주제 예고</li>
+                    </ul>
+                  </td>
+                  <td>진행자</td>
+                </tr>
+                <tr>
+                  <td><strong>음악 1</strong><small>전환곡</small></td>
+                  <td>6~9분<br /><span>(3')</span></td>
+                  <td>
+                    <ul>
+                      <li>초여름 저녁 분위기에 맞는 곡</li>
+                      <li>곡 후 게스트 소개로 자연스럽게 연결</li>
+                    </ul>
+                  </td>
+                  <td>진행자</td>
+                </tr>
+                <tr>
+                  <td><strong>토크 1</strong><small>게스트 소개</small></td>
+                  <td>9~15분<br /><span>(6')</span></td>
+                  <td>
+                    <ul>
+                      <li>게스트 닉네임 소개 및 인사</li>
+                      <li>병원에서 맡은 역할과 소개 가능한 범위 확인</li>
+                      <li>운동을 꾸준히 하게 된 계기</li>
+                      <li>자전거에 재미를 느낀 첫 순간</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br />게스트</td>
+                </tr>
+                <tr>
+                  <td><strong>토크 2</strong><small>초여름 라이딩</small></td>
+                  <td>15~25분<br /><span>(10')</span></td>
+                  <td>
+                    <ul>
+                      <li>6월 라이딩의 장점과 주의점</li>
+                      <li>출발 전 날씨, 물, 전해질, 조명 확인</li>
+                      <li>비 예보가 애매한 날의 코스 선택</li>
+                      <li>청취자 질문 유도: “라이딩 전 꼭 확인하는 것은?”</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br />게스트</td>
+                </tr>
+                <tr>
+                  <td><strong>토크 3</strong><small>일과 운동의 균형</small></td>
+                  <td>25~34분<br /><span>(9')</span></td>
+                  <td>
+                    <ul>
+                      <li>병원 근무와 운동 시간을 병행하는 방법</li>
+                      <li>출근 전, 퇴근 후, 쉬는 날 운동 루틴</li>
+                      <li>마라톤, 축구, 자전거가 주는 다른 즐거움</li>
+                      <li>운동이 스트레스와 집중도에 주는 변화</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br />게스트</td>
+                </tr>
+                <tr>
+                  <td><strong>토크 4</strong><small>추천 코스</small></td>
+                  <td>34~43분<br /><span>(9')</span></td>
+                  <td>
+                    <ul>
+                      <li>가장 기억에 남는 라이딩 코스</li>
+                      <li>만경강 자전거길, 해안도로, 숲길 에피소드</li>
+                      <li>초여름에 더위를 피할 수 있는 코스 기준</li>
+                      <li>라이딩 후 추천 음식 또는 맛집</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br />게스트</td>
+                </tr>
+                <tr>
+                  <td><strong>토크 5</strong><small>목표와 계획</small></td>
+                  <td>43~49분<br /><span>(6')</span></td>
+                  <td>
+                    <ul>
+                      <li>올해 도전해보고 싶은 운동 목표</li>
+                      <li>장거리 라이딩, 대회 참가, 새로운 종목 관심</li>
+                      <li>지치거나 바쁠 때 다시 움직이는 동기부여</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br />게스트</td>
+                </tr>
+                <tr>
+                  <td><strong>사연/질문</strong><small>청취자 코너</small></td>
+                  <td>49~56분<br /><span>(7')</span></td>
+                  <td>
+                    <ul>
+                      <li>여름 라이딩 후 피로 회복 방법</li>
+                      <li>라이딩 중 비를 만났을 때 계속 탈지 판단하는 기준</li>
+                      <li>교대근무 중 운동 루틴을 유지하는 방법</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br />게스트</td>
+                </tr>
+                <tr>
+                  <td><strong>음악 2</strong><small>전환곡</small></td>
+                  <td>56~59분<br /><span>(3')</span></td>
+                  <td>
+                    <ul>
+                      <li>청취자 질문 코너 후 분위기 전환</li>
+                      <li>안전과 건강 정보 코너로 연결</li>
+                    </ul>
+                  </td>
+                  <td>진행자</td>
+                </tr>
+                <tr>
+                  <td><strong>정보 코너</strong><small>안전과 건강</small></td>
+                  <td>59~64분<br /><span>(5')</span></td>
+                  <td>
+                    <ul>
+                      <li>탈수와 열 피로 예방: 출발 전부터 수분 섭취</li>
+                      <li>20~30분마다 조금씩 물 마시기</li>
+                      <li>젖은 노면, 맨홀, 횡단보도 페인트 주의</li>
+                      <li>무리한 야외 라이딩 대신 실내 운동 대안 소개</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br />게스트</td>
+                </tr>
+                <tr>
+                  <td><strong>클로징</strong><small>마무리</small></td>
+                  <td>64~68분<br /><span>(4')</span></td>
+                  <td>
+                    <ul>
+                      <li>오늘 내용 요약: 더운 시간 피하기, 물 미리 마시기</li>
+                      <li>비 예보가 있는 날 코스와 장비 확인</li>
+                      <li>게스트 소감과 청취자 응원 메시지</li>
+                      <li>마무리 인사 및 엔딩 음악</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br />게스트</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
 
         <section id="script-view" class="view active" aria-label="전체 대본">
           <article id="script-copy-source">

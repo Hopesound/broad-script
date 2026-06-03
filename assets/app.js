@@ -6,7 +6,7 @@ const copyButton = document.querySelector("#copy-script");
 const printButton = document.querySelector("#print-page");
 const scriptBlocks = document.querySelectorAll(".script-block");
 
-function showView(viewId) {
+function showView(viewId, updateHash = true) {
   viewButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.view === viewId);
   });
@@ -16,6 +16,10 @@ function showView(viewId) {
     view.classList.toggle("active", active);
     view.hidden = !active;
   });
+
+  if (updateHash) {
+    history.replaceState(null, "", `#${viewId}`);
+  }
 }
 
 viewButtons.forEach((button) => {
@@ -66,3 +70,8 @@ copyButton.addEventListener("click", async () => {
 printButton.addEventListener("click", () => {
   window.print();
 });
+
+const requestedView = window.location.hash.replace("#", "");
+if (requestedView && document.getElementById(requestedView)) {
+  showView(requestedView, false);
+}
