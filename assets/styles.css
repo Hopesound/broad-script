@@ -7,6 +7,7 @@
   --line: #ddd7cb;
   --green: #1f6b57;
   --blue: #245f87;
+  --guest-blue: #165fcc;
   --sun: #b86d21;
   --soft-green: #e6f0ea;
   --soft-blue: #e5eef5;
@@ -470,6 +471,16 @@ button:focus-visible {
 
 .line b {
   color: var(--green);
+}
+
+.line.guest-line b,
+.line.guest-line span,
+.guest-name {
+  color: var(--guest-blue);
+}
+
+.line.guest-line {
+  background: rgba(22, 95, 204, 0.045);
 }
 
 .cue {
