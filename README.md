@@ -6,7 +6,7 @@
 
 | 방송일 | 제목 | 상태 | 파일 |
 | --- | --- | --- | --- |
-| 2026-07-13 | 김미경의 자전거와 운동 이야기 | 수정본 | [episodes/2026-06-05-riding-star.md](episodes/2026-06-05-riding-star.md) |
+| 2026-07-13 | 자전거와 운동이야기 | 수정본 | [episodes/2026-06-05-riding-star.md](episodes/2026-06-05-riding-star.md) |
 
 ## 관리 방식
 

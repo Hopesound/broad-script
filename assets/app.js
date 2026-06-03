@@ -1,10 +1,15 @@
 const viewButtons = document.querySelectorAll("[data-view]");
 const views = document.querySelectorAll(".view");
+const searchForm = document.querySelector(".search-form");
 const searchInput = document.querySelector("#script-search");
 const clearSearchButton = document.querySelector("#clear-search");
 const copyButton = document.querySelector("#copy-script");
 const printButton = document.querySelector("#print-page");
 const scriptBlocks = document.querySelectorAll(".script-block");
+const episodeMenuToggle = document.querySelector("#episode-menu-toggle");
+const episodeMenuClose = document.querySelector("#episode-menu-close");
+const episodePanel = document.querySelector("#episode-panel");
+const panelBackdrop = document.querySelector("#panel-backdrop");
 
 function showView(viewId, updateHash = true) {
   viewButtons.forEach((button) => {
@@ -33,11 +38,18 @@ function filterScript(keyword) {
   });
 }
 
+function updateClearSearchButton() {
+  clearSearchButton.hidden = searchInput.value.trim() === "";
+}
+
 searchInput.addEventListener("input", () => {
+  updateClearSearchButton();
+});
+
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
   const keyword = searchInput.value.trim().toLowerCase();
-
   filterScript(keyword);
-
   if (keyword) {
     showView("script-view");
   }
@@ -45,9 +57,41 @@ searchInput.addEventListener("input", () => {
 
 clearSearchButton.addEventListener("click", () => {
   searchInput.value = "";
+  updateClearSearchButton();
   filterScript("");
   showView("script-view");
   searchInput.focus();
+});
+
+function setEpisodePanelOpen(open) {
+  episodePanel.classList.toggle("is-open", open);
+  panelBackdrop.classList.toggle("is-visible", open);
+  panelBackdrop.hidden = !open;
+  episodeMenuToggle.setAttribute("aria-expanded", String(open));
+}
+
+episodeMenuToggle.addEventListener("click", () => {
+  setEpisodePanelOpen(!episodePanel.classList.contains("is-open"));
+});
+
+episodeMenuClose.addEventListener("click", () => {
+  setEpisodePanelOpen(false);
+  episodeMenuToggle.focus();
+});
+
+panelBackdrop.addEventListener("click", () => {
+  setEpisodePanelOpen(false);
+});
+
+episodePanel.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => setEpisodePanelOpen(false));
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && episodePanel.classList.contains("is-open")) {
+    setEpisodePanelOpen(false);
+    episodeMenuToggle.focus();
+  }
 });
 
 copyButton.addEventListener("click", async () => {
@@ -75,3 +119,5 @@ const requestedView = window.location.hash.replace("#", "");
 if (requestedView && document.getElementById(requestedView)) {
   showView(requestedView, false);
 }
+
+updateClearSearchButton();

@@ -16,22 +16,29 @@
         </span>
       </a>
       <div class="toolbar" aria-label="문서 도구">
-        <label class="search">
-          <span>검색</span>
-          <input id="script-search" type="search" placeholder="예: 장거리, 마라톤, 축구" />
-        </label>
-        <button type="button" id="clear-search">검색 초기화</button>
+        <form class="search-form" role="search">
+          <label class="search-label" for="script-search">검색</label>
+          <div class="search-box">
+            <input id="script-search" type="search" placeholder="예: 장거리, 마라톤, 축구" />
+            <button type="button" id="clear-search" class="search-clear" aria-label="검색어 지우기" hidden>×</button>
+          </div>
+          <button type="submit" id="search-submit">검색</button>
+        </form>
+        <button type="button" id="episode-menu-toggle" class="episode-menu-toggle" aria-controls="episode-panel" aria-expanded="false">회차 관리</button>
         <button type="button" id="copy-script">대본 복사</button>
         <button type="button" id="print-page">인쇄</button>
       </div>
     </header>
 
     <div class="layout">
-      <aside class="sidebar" aria-label="회차 목록">
-        <h1>회차 관리</h1>
+      <aside class="sidebar" id="episode-panel" aria-label="회차 목록">
+        <div class="sidebar-head">
+          <h1>회차 관리</h1>
+          <button type="button" id="episode-menu-close" class="sidebar-close" aria-label="회차 관리 닫기">×</button>
+        </div>
         <a class="episode current" href="#script-view">
           <span>방송 2026-07-13</span>
-          <strong>김미경의 자전거와 운동 이야기</strong>
+          <strong>자전거와 운동이야기</strong>
           <small>수정본 · 60분</small>
         </a>
         <div class="sidebar-note">
@@ -48,11 +55,7 @@
         <section class="summary" aria-labelledby="page-title">
           <div>
             <p class="eyebrow">녹음 2026년 6월 5일 오후 7시경 · 방송 2026년 7월 13일 20시</p>
-            <h2 id="page-title">김미경의 자전거와 운동 이야기</h2>
-            <p>
-              김미경님에게 자기소개부터 자전거의 시작, 장거리 라이딩, 계절을 느끼는 순간,
-              마라톤과 축구, 앞으로의 목표까지 차례로 묻는 60분 인터뷰 구성입니다.
-            </p>
+            <h2 id="page-title">자전거와 운동이야기</h2>
           </div>
           <dl class="meta-grid">
             <div>
@@ -93,7 +96,7 @@
               <tbody>
                 <tr>
                   <th>프로그램명</th>
-                  <td>라이딩스타(김미경의 자전거와 운동 이야기)</td>
+                  <td>라이딩스타(자전거와 운동이야기)</td>
                 </tr>
                 <tr>
                   <th>진행</th>
@@ -133,10 +136,9 @@
                   <td>0~5분<br /><span>(5')</span></td>
                   <td>
                     <ul>
-                      <li>진행자 인사</li>
-                      <li>7월 중순 무더위와 한낮 라이딩 주의 안내</li>
-                      <li>여름 축제와 시원한 라이딩 코스 언급</li>
-                      <li>김미경님과의 라이딩 토크 예고</li>
+                      <li>진행자 인사, 7월 무더위</li>
+                      <li>한낮 라이딩 주의, 수분 섭취</li>
+                      <li>김미경님 토크 예고</li>
                     </ul>
                   </td>
                   <td>진행자</td>
@@ -146,8 +148,8 @@
                   <td>5~8분<br /><span>(3')</span></td>
                   <td>
                     <ul>
-                      <li>한여름 저녁 분위기에 맞는 곡</li>
-                      <li>곡 후 본격 질문 토크 시작</li>
+                      <li>한여름 전환곡</li>
+                      <li>곡 후 본격 토크</li>
                     </ul>
                   </td>
                   <td>진행자</td>
@@ -157,8 +159,8 @@
                   <td>8~15분<br /><span>(7')</span></td>
                   <td>
                     <ul>
-                      <li>먼저 자기소개 부탁드릴게요.</li>
-                      <li>자전거는 어떻게 처음 타게 되셨나요?</li>
+                      <li>자기소개</li>
+                      <li>자전거를 처음 타게 된 계기</li>
                     </ul>
                   </td>
                   <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
@@ -168,8 +170,8 @@
                   <td>15~24분<br /><span>(9')</span></td>
                   <td>
                     <ul>
-                      <li>혼자 타는 자전거와 함께 타는 자전거는 어떤 점이 다른가요?</li>
-                      <li>지금도 기억나는 장거리 라이딩이 있나요?</li>
+                      <li>혼자 타기 vs 함께 타기</li>
+                      <li>기억나는 장거리 라이딩</li>
                     </ul>
                   </td>
                   <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
@@ -179,9 +181,9 @@
                   <td>24~33분<br /><span>(9')</span></td>
                   <td>
                     <ul>
-                      <li>자전거를 타면서 계절을 가장 많이 느끼는 순간은 언제인가요?</li>
-                      <li>새벽 라이딩과 해질 무렵 라이딩 중 더 좋아하는 시간대는 언제인가요?</li>
-                      <li>지금까지 탄 코스 중 가장 다시 가고 싶은 길은 어디인가요?</li>
+                      <li>자전거에서 느끼는 계절</li>
+                      <li>새벽 vs 해질 무렵</li>
+                      <li>다시 가고 싶은 길</li>
                     </ul>
                   </td>
                   <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
@@ -191,8 +193,8 @@
                   <td>33~42분<br /><span>(9')</span></td>
                   <td>
                     <ul>
-                      <li>자전거는 기록을 남기는 운동일까요? 풍경을 담는 운동일까요?</li>
-                      <li>병원에서 일하면 체력적으로 이미 많이 쓰일 텐데, 운동을 더하는 이유가 있을까요?</li>
+                      <li>기록의 운동? 풍경의 운동?</li>
+                      <li>병원 근무 후 운동하는 이유</li>
                     </ul>
                   </td>
                   <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
@@ -202,9 +204,9 @@
                   <td>42~50분<br /><span>(8')</span></td>
                   <td>
                     <ul>
-                      <li>자전거 말고 다른 운동까지 하신다고 들었습니다. 어떤 운동을 하시나요?</li>
-                      <li>자전거 말고 마라톤까지 하게 된 계기는 무엇인가요?</li>
-                      <li>축구는 어떻게 시작하셨나요?</li>
+                      <li>자전거 외 운동</li>
+                      <li>마라톤을 시작한 계기</li>
+                      <li>축구를 시작한 계기</li>
                     </ul>
                   </td>
                   <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
@@ -214,8 +216,8 @@
                   <td>50~55분<br /><span>(5')</span></td>
                   <td>
                     <ul>
-                      <li>앞으로 꼭 해보고 싶은 라이딩 목표가 있나요?</li>
-                      <li>앞으로의 목표는 "더 빠르게"인가요, "더 오래"인가요, 아니면 "더 즐겁게"인가요?</li>
+                      <li>앞으로의 라이딩 목표</li>
+                      <li>더 빠르게 / 더 오래 / 더 즐겁게</li>
                     </ul>
                   </td>
                   <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
@@ -225,7 +227,7 @@
                   <td>55~57분<br /><span>(2')</span></td>
                   <td>
                     <ul>
-                      <li>토크를 정리하고 클로징으로 전환</li>
+                      <li>클로징 전환</li>
                     </ul>
                   </td>
                   <td>진행자</td>
@@ -235,10 +237,10 @@
                   <td>57~60분<br /><span>(3')</span></td>
                   <td>
                     <ul>
-                      <li>김미경님에게 방송 소감 질문</li>
-                      <li>생활의 리듬으로 쌓이는 건강 이야기</li>
-                      <li>물, 그늘, 휴식 먼저 기억하기</li>
-                      <li>진행자 마무리 인사와 함께 엔딩</li>
+                      <li>김미경님 방송 소감</li>
+                      <li>건강한 운동 습관</li>
+                      <li>물, 그늘, 휴식 먼저</li>
+                      <li>함께 엔딩</li>
                     </ul>
                   </td>
                   <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
@@ -443,12 +445,12 @@
           </div>
           <div class="source-note">
             <h3>자료 메모</h3>
-            <p>녹음일시는 2026년 6월 5일 오후 7시경, 방송일시는 2026년 7월 13일 20시로 표기했습니다.</p>
-            <p>큐시트는 0분부터 60분까지 정확히 이어지도록 재구성했습니다.</p>
+            <p>특이사항 확인 중</p>
           </div>
         </section>
       </main>
     </div>
+    <div id="panel-backdrop" class="panel-backdrop" hidden></div>
 
     <script src="assets/app.js"></script>
   </body>
