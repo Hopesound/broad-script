@@ -120,4 +120,11 @@ if (requestedView && document.getElementById(requestedView)) {
   showView(requestedView, false);
 }
 
+window.addEventListener("hashchange", () => {
+  const requestedView = window.location.hash.replace("#", "");
+  if (requestedView && document.getElementById(requestedView)) {
+    showView(requestedView, false);
+  }
+});
+
 updateClearSearchButton();

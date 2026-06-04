@@ -8,18 +8,17 @@
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="#script-view" aria-label="라이딩스타 대본 홈">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>
-          <strong>라이딩스타</strong>
-          <small>방송 시나리오</small>
+      <a class="brand" href="https://riding-star.vercel.app/" aria-label="Riding-star 메인페이지로 이동">
+        <span class="brand-mark" aria-hidden="true">RS</span>
+        <span class="brand-copy">
+          <strong>Riding-star</strong>
         </span>
       </a>
       <div class="toolbar" aria-label="문서 도구">
         <form class="search-form" role="search">
           <label class="search-label" for="script-search">검색</label>
           <div class="search-box">
-            <input id="script-search" type="search" placeholder="예: 장거리, 마라톤, 축구" />
+            <input id="script-search" type="search" placeholder="예: 탄감자, 보물찾기, 초여름" />
             <button type="button" id="clear-search" class="search-clear" aria-label="검색어 지우기" hidden>×</button>
           </div>
           <button type="submit" id="search-submit">검색</button>
@@ -36,17 +35,30 @@
           <h1>회차 관리</h1>
           <button type="button" id="episode-menu-close" class="sidebar-close" aria-label="회차 관리 닫기">×</button>
         </div>
-        <a class="episode current" href="#script-view">
+        <article class="episode">
           <span>방송 2026-07-13</span>
-          <strong>자전거와 운동이야기</strong>
+          <strong>김미경 · 자전거와 운동이야기</strong>
           <small>수정본 · 60분</small>
-        </a>
+          <div class="episode-actions">
+            <a href="kim-mikyung.html#script-view">시나리오</a>
+            <a href="kim-mikyung.html#cue-view">큐시트</a>
+          </div>
+        </article>
+        <article class="episode current" aria-current="page">
+          <span>방송 2026-06-15</span>
+          <strong>김길중 · 탄감자와 자전거 챌린지 이야기</strong>
+          <small>초안 · 60분</small>
+          <div class="episode-actions">
+            <a href="index.html#script-view">시나리오</a>
+            <a href="index.html#cue-view">큐시트</a>
+          </div>
+        </article>
         <div class="sidebar-note">
           <strong>방송 전 확인</strong>
           <ul>
-            <li>김미경 방송 소개 정보 확정</li>
-            <li>삽입곡 2곡 확정</li>
-            <li>방송일 기준 날씨 표현 확인</li>
+            <li>김길중 출연 정보와 호칭 확정</li>
+            <li>삽입곡 4곡 또는 대체곡 확정</li>
+            <li>탄감자 챌린지 신청 경로 확인</li>
           </ul>
         </div>
       </aside>
@@ -54,8 +66,8 @@
       <main class="content">
         <section class="summary" aria-labelledby="page-title">
           <div>
-            <p class="eyebrow">녹음 2026년 6월 5일 오후 7시경 · 방송 2026년 7월 13일 20시</p>
-            <h2 id="page-title">자전거와 운동이야기</h2>
+            <p class="eyebrow">방송 2026년 6월 15일 · 녹음일시 확인 필요</p>
+            <h2 id="page-title">탄감자와 자전거 챌린지 이야기</h2>
           </div>
           <dl class="meta-grid">
             <div>
@@ -64,11 +76,11 @@
             </div>
             <div>
               <dt>출연</dt>
-              <dd>김미경</dd>
+              <dd>김길중</dd>
             </div>
             <div>
               <dt>방송일시</dt>
-              <dd>2026-07-13 20:00</dd>
+              <dd>2026-06-15</dd>
             </div>
             <div>
               <dt>분량</dt>
@@ -96,7 +108,7 @@
               <tbody>
                 <tr>
                   <th>프로그램명</th>
-                  <td>라이딩스타(자전거와 운동이야기)</td>
+                  <td>라이딩스타(탄감자와 자전거 챌린지 이야기)</td>
                 </tr>
                 <tr>
                   <th>진행</th>
@@ -104,7 +116,7 @@
                 </tr>
                 <tr>
                   <th>출연</th>
-                  <td><span class="guest-name">김미경</span></td>
+                  <td><span class="guest-name">김길중</span></td>
                 </tr>
                 <tr>
                   <th>녹음장소</th>
@@ -112,11 +124,11 @@
                 </tr>
                 <tr>
                   <th>녹음일시</th>
-                  <td>2026년 6월 5일 오후 7시경</td>
+                  <td>확인 필요</td>
                 </tr>
                 <tr>
                   <th>방송일시</th>
-                  <td>2026년 7월 13일 20시</td>
+                  <td>2026년 6월 15일</td>
                 </tr>
               </tbody>
             </table>
@@ -132,99 +144,111 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>오프닝</strong><small>7월 무더위</small></td>
-                  <td>0~5분<br /><span>(5')</span></td>
+                  <td><strong>오프닝</strong><small>6월 초여름</small></td>
+                  <td>0~4분<br /><span>(4')</span></td>
                   <td>
                     <ul>
-                      <li>진행자 인사, 7월 무더위</li>
-                      <li>한낮 라이딩 주의, 수분 섭취</li>
-                      <li>김미경님 토크 예고</li>
+                      <li>진행자 인사, 6월 초여름 라이딩</li>
+                      <li>20℃ 안팎 아침, 28℃ 낮 기온 안내</li>
+                      <li>수분 보충, 아침·해질녘 라이딩 권장</li>
+                      <li>강변길, 숲길, 산과 바닷가 코스 추천</li>
                     </ul>
                   </td>
                   <td>진행자</td>
                 </tr>
                 <tr>
                   <td><strong>음악 1</strong><small>전환곡</small></td>
-                  <td>5~8분<br /><span>(3')</span></td>
+                  <td>4~6분<br /><span>(2')</span></td>
                   <td>
                     <ul>
-                      <li>한여름 전환곡</li>
-                      <li>곡 후 본격 토크</li>
+                      <li>게스트 토크 전환</li>
                     </ul>
                   </td>
                   <td>진행자</td>
                 </tr>
                 <tr>
-                  <td><strong>토크 1</strong><small>소개와 시작</small></td>
-                  <td>8~15분<br /><span>(7')</span></td>
+                  <td><strong>토크 1</strong><small>시작과 목표</small></td>
+                  <td>6~16분<br /><span>(10')</span></td>
                   <td>
                     <ul>
-                      <li>자기소개</li>
-                      <li>자전거를 처음 타게 된 계기</li>
+                      <li>탄감자의 의미와 시작</li>
+                      <li>탄소 감축 챌린지 기획 이유</li>
+                      <li>장기적 목표</li>
                     </ul>
                   </td>
-                  <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
+                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
                 </tr>
                 <tr>
-                  <td><strong>토크 2</strong><small>함께 타기</small></td>
-                  <td>15~24분<br /><span>(9')</span></td>
+                  <td><strong>토크 2</strong><small>에피소드</small></td>
+                  <td>16~26분<br /><span>(10')</span></td>
                   <td>
                     <ul>
-                      <li>혼자 타기 vs 함께 타기</li>
-                      <li>기억나는 장거리 라이딩</li>
+                      <li>챌린지와 모임의 재미있는 순간</li>
+                      <li>힘들거나 위험했던 기억</li>
+                      <li>안전과 함께 타기의 교훈</li>
                     </ul>
                   </td>
-                  <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
+                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
                 </tr>
                 <tr>
-                  <td><strong>토크 3</strong><small>계절과 길</small></td>
-                  <td>24~33분<br /><span>(9')</span></td>
+                  <td><strong>토크 3</strong><small>방향과 꿈</small></td>
+                  <td>26~36분<br /><span>(10')</span></td>
                   <td>
                     <ul>
-                      <li>자전거에서 느끼는 계절</li>
-                      <li>새벽 vs 해질 무렵</li>
-                      <li>다시 가고 싶은 길</li>
+                      <li>전주·완주 밖으로 확장하는 미션</li>
+                      <li>건강 프로그램과 지역 협력</li>
+                      <li>청취자에게 전하는 한마디</li>
                     </ul>
                   </td>
-                  <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
+                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
                 </tr>
                 <tr>
-                  <td><strong>토크 4</strong><small>기록과 회복</small></td>
-                  <td>33~42분<br /><span>(9')</span></td>
+                  <td><strong>음악 2</strong><small>중간 전환</small></td>
+                  <td>36~38분<br /><span>(2')</span></td>
                   <td>
                     <ul>
-                      <li>기록의 운동? 풍경의 운동?</li>
-                      <li>병원 근무 후 운동하는 이유</li>
+                      <li>라이딩 팁 코너로 전환</li>
                     </ul>
                   </td>
-                  <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
+                  <td>진행자</td>
                 </tr>
                 <tr>
-                  <td><strong>토크 5</strong><small>다른 운동</small></td>
-                  <td>42~50분<br /><span>(8')</span></td>
+                  <td><strong>토크 4</strong><small>팁과 코스</small></td>
+                  <td>38~46분<br /><span>(8')</span></td>
                   <td>
                     <ul>
-                      <li>자전거 외 운동</li>
-                      <li>마라톤을 시작한 계기</li>
-                      <li>축구를 시작한 계기</li>
+                      <li>6월 초여름 라이딩 준비</li>
+                      <li>전주, 완주, 익산, 김제 추천 코스</li>
+                      <li>수분과 통풍 좋은 복장 안내</li>
                     </ul>
                   </td>
-                  <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
+                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
                 </tr>
                 <tr>
-                  <td><strong>토크 6</strong><small>앞으로의 목표</small></td>
-                  <td>50~55분<br /><span>(5')</span></td>
+                  <td><strong>음악 3</strong><small>전환곡</small></td>
+                  <td>46~48분<br /><span>(2')</span></td>
                   <td>
                     <ul>
-                      <li>앞으로의 라이딩 목표</li>
-                      <li>더 빠르게 / 더 오래 / 더 즐겁게</li>
+                      <li>청취자 질문 코너로 전환</li>
                     </ul>
                   </td>
-                  <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
+                  <td>진행자</td>
                 </tr>
                 <tr>
-                  <td><strong>음악 2</strong><small>정리곡</small></td>
-                  <td>55~57분<br /><span>(2')</span></td>
+                  <td><strong>토크 5</strong><small>질문과 후기</small></td>
+                  <td>48~56분<br /><span>(8')</span></td>
+                  <td>
+                    <ul>
+                      <li>참여 방법, 기억나는 미션</li>
+                      <li>모임 가입 안내</li>
+                      <li>시민 후기 소개</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
+                </tr>
+                <tr>
+                  <td><strong>음악 4</strong><small>정리곡</small></td>
+                  <td>56~57분<br /><span>(1')</span></td>
                   <td>
                     <ul>
                       <li>클로징 전환</li>
@@ -237,13 +261,12 @@
                   <td>57~60분<br /><span>(3')</span></td>
                   <td>
                     <ul>
-                      <li>김미경님 방송 소감</li>
-                      <li>건강한 운동 습관</li>
-                      <li>물, 그늘, 휴식 먼저</li>
-                      <li>함께 엔딩</li>
+                      <li>탄감자 챌린지 정리</li>
+                      <li>김길중님과 회원들의 열정 언급</li>
+                      <li>건강하고 즐거운 라이딩 인사</li>
                     </ul>
                   </td>
-                  <td>진행자 &amp;<br /><span class="guest-name">김미경</span></td>
+                  <td>진행자</td>
                 </tr>
               </tbody>
             </table>
@@ -254,102 +277,114 @@
           <article id="script-copy-source">
             <section class="script-block">
               <header>
-                <span>0~5분</span>
+                <span>0~4분</span>
                 <h3>오프닝</h3>
               </header>
-              <p class="line"><b>박정규</b><span>안녕하세요, 만경강을 달리는 아줌마 라이딩스타의 박정규입니다.</span></p>
+              <p class="line"><b>박정규</b><span>안녕하세요, 만경강을 달리는 아줌마, 라이딩스타의 박정규입니다.</span></p>
               <p class="line"><b>강왕규</b><span>안녕하세요, 페달에 발만 올리면 행복해지는 라이딩스타의 강왕규입니다.</span></p>
-              <p class="line"><b>박정규</b><span>벌써 7월 중순입니다. 어느새 여름 문턱을 훌쩍 넘어선 느낌이죠. 이제는 '덥다'는 말이 인사가 된 계절이죠. 밖에만 나가도 '아후~'소리가 절로 나오는 무더위입니다.</span></p>
-              <p class="line"><b>강왕규</b><span>그래도 자전거를 향한 열정은 식지 않습니다. 다만 요즘처럼 습도 높고 땡볕이 강한 날에는 한낮 라이딩은 피하는 게 좋습니다. 수분 섭취 충분히 하시고, 가능한 한 이른 아침이나 해 질 무렵에 타시는 걸 추천드립니다. 건강하게 오래 타는 게 중요하니까요.</span></p>
-              <p class="line"><b>박정규</b><span>맞아요. 폭염 속 무리한 라이딩은 오히려 건강을 해칠 수 있습니다. 대신 이런 계절엔 시원한 라이딩 코스를 찾아보는 것도 좋은 방법이겠죠.</span></p>
-              <p class="line"><b>강왕규</b><span>그리고 지금 이 시기, 여름 축제도 한창입니다. 보령 머드축제처럼 더위를 이기는 색다른 즐거움도 있고, 곳곳에서 열리는 여름 축제를 즐기는 것도 추천드립니다. 여름은 덥지만, 또 그만큼 살아 있다는 느낌이 강한 계절이니까요.</span></p>
-              <p class="line"><b>박정규</b><span>무더위 속에서도 건강하게, 안전하게, 그리고 즐겁게 라이딩 했으면 합니다. 노래 한 곡 듣고 오늘의 게스트와 함께하는 라이딩 토크 시작하겠습니다.</span></p>
+              <p class="line"><b>박정규</b><span>6월이 되니 아침에는 20℃ 안팎으로 선선하고, 오후에는 28℃ 정도까지 올라가면서 초여름의 더위를 느낄 수 있네요. 그래서 아침 라이딩은 상쾌하고 낮에는 조금 더워져 땀이 나지만, 장마가 본격화되기 전이라 여전히 라이딩하기 좋은 날씨입니다.</span></p>
+              <p class="line"><b>강왕규</b><span>맞아요. 이런 날씨에는 고르게 수분을 보충하는 것이 중요합니다. 전문가들은 운동 1~2시간 전에 물 16온스를 마시고, 라이딩 중에는 10~15분마다 조금씩 물을 마시라고 권장해요. 또 햇볕이 강한 한낮보다는 아침이나 해가 질 무렵에 라이딩을 하면 더 쾌적하고, 통풍이 잘되는 옷을 입으면 체온 조절에도 도움이 됩니다.</span></p>
+              <p class="line"><b>박정규</b><span>코스 추천도 빼놓을 수 없죠. 지금 같은 계절에는 강변길이나 숲길처럼 그늘이 있는 코스가 좋고, 주말에는 산이나 바닷가로 짧은 나들이를 떠나 시원한 바람을 만끽하는 것도 좋은 방법입니다. 특히 초여름의 푸른 들판과 강가를 달리다 보면 일상의 스트레스가 싹 사라지는 기분이에요.</span></p>
+              <p class="line"><b>강왕규</b><span>자전거를 타다 보면 작은 일상도 특별해지는 것 같아요. 여러분은 최근 어떤 코스에서 라이딩을 즐기셨나요?</span></p>
+              <p class="line"><b>박정규</b><span>그럼 여기서 노래 한 곡 듣고 본격적인 라이딩 이야기를 이어가겠습니다.</span></p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>5~8분</span>
+                <span>4~6분</span>
                 <h3>음악 1</h3>
               </header>
-              <p class="cue">한여름 저녁 분위기에 맞는 곡으로 전환합니다.</p>
+              <p class="cue">초여름 라이딩 분위기에 맞는 곡으로 본격적인 이야기를 준비합니다.</p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>8~15분</span>
-                <h3>토크 1. 자기소개와 자전거의 시작</h3>
+                <span>6~16분</span>
+                <h3>토크 1. 탄감자의 시작과 목표</h3>
               </header>
-              <p class="line"><b>박정규</b><span>김미경님, 먼저 자기소개 부탁드릴게요. 병원에서는 어떤 일을 하고 계신지, 그리고 평소 어떤 운동을 즐기시는지도 함께 소개해 주세요.</span></p>
-              <p class="line guest-line"><b>김미경</b><span>병원에서 맡은 역할, 일상적인 근무 분위기, 자전거와 운동을 즐기게 된 배경을 소개.</span></p>
-              <p class="line"><b>강왕규</b><span>자전거는 어떻게 처음 타게 되셨나요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>처음 자전거를 접한 계기, 다시 자전거에 빠지게 된 순간, 첫 라이딩의 기억을 이야기.</span></p>
+              <p class="line"><b>박정규</b><span>김길중님, 먼저 탄감자가 무엇인지 소개해 주세요. 이름부터 참 인상적인데요, 어떻게 시작하게 된 모임인가요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>탄감자는 탄소를 감축하는 자전거라는 뜻입니다. 일상에서 자전거를 타며 탄소를 줄이자는 취지로 1년 전 작은 소모임에서 출발했습니다. 자동차보다 느리지만 더 많은 것을 보고 느낄 수 있는 이동수단으로서 자전거를 알리고 싶었습니다.</span></p>
+              <p class="line"><b>강왕규</b><span>4월 말 방송 이후 탄소 감축 챌린지를 진행하셨다고 들었습니다. 이 챌린지를 기획하게 된 이유와 목표는 무엇이었나요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>일상 속 이동을 자전거로 대체해 탄소 배출을 줄이고 싶었습니다. 하루 10km 이상을 30일간 달성하면 기념품을 제공해 동기를 만들었고, 전주와 완주에 숨겨진 10개의 보물 미션을 찾아 인증하면 상품권을 드리는 보물찾기 프로그램도 함께 진행했습니다. 시민들이 지역 명소를 자전거로 둘러보는 계기가 되길 바랐습니다.</span></p>
+              <p class="line"><b>박정규</b><span>탄감자가 장기적으로 이루고 싶은 목표는 무엇인가요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>궁극적으로는 자전거가 생활 속 이동수단으로 자연스럽게 자리 잡는 도시를 만드는 것입니다. 자전거 인프라를 늘리고, 지역경제와 건강, 환경을 모두 살리는 모임으로 성장하고 싶습니다.</span></p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>15~24분</span>
-                <h3>토크 2. 혼자 타는 자전거와 함께 타는 자전거</h3>
+                <span>16~26분</span>
+                <h3>토크 2. 재미있는 에피소드와 아픈 기억</h3>
               </header>
-              <p class="line"><b>박정규</b><span>혼자 타는 자전거와 함께 타는 자전거는 어떤 점이 다른가요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>혼자 탈 때의 자유로움, 함께 탈 때의 안정감과 즐거움, 서로 페이스를 맞추는 경험을 비교.</span></p>
-              <p class="line"><b>강왕규</b><span>지금도 기억나는 장거리 라이딩이 있나요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>장거리 라이딩 코스, 힘들었던 순간, 완주 후의 성취감, 함께한 사람들과의 에피소드.</span></p>
+              <p class="line"><b>강왕규</b><span>챌린지나 모임을 이끌면서 가장 재미있었던 순간은 무엇이었나요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>첫 시민 자전거 행진에서 어린아이부터 어르신까지 한 줄로 달리던 모습이 기억에 남습니다. 또 보물 미션을 수행하면서 QR코드를 찾다가 사진 각도를 맞추려고 서로 웃음을 터뜨리던 순간도 참 즐거웠습니다.</span></p>
+              <p class="line"><b>박정규</b><span>반대로 힘들거나 아픈 기억도 있었을까요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>교통 인프라가 부족한 구간에서 위험을 느꼈던 경험이 있습니다. 챌린지 중 비가 오는 날 미끄러운 도로에서 넘어질 뻔했던 일도 있었고요. 그런 순간을 겪으면서 안전이 가장 먼저라는 것을 다시 생각하게 됐습니다.</span></p>
+              <p class="line"><b>강왕규</b><span>그런 경험을 통해 얻은 교훈이 있다면 무엇인가요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>안전 장비의 필요성, 날씨에 따른 준비, 그리고 혼자가 아니라 함께 타는 것의 중요성을 배웠습니다. 앞으로 탄감자 모임도 교육과 안전 캠페인을 더 체계적으로 진행해야겠다고 생각합니다.</span></p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>24~33분</span>
-                <h3>토크 3. 계절, 시간대, 다시 가고 싶은 길</h3>
+                <span>26~36분</span>
+                <h3>토크 3. 앞으로의 방향과 꿈</h3>
               </header>
-              <p class="line"><b>박정규</b><span>자전거를 타면서 계절을 가장 많이 느끼는 순간은 언제인가요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>바람, 햇빛, 꽃, 강변 풍경, 땀과 체감 온도처럼 자전거에서만 선명하게 느껴지는 계절감.</span></p>
-              <p class="line"><b>강왕규</b><span>새벽 라이딩과 해질 무렵 라이딩 중 더 좋아하는 시간대는 언제인가요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>새벽의 고요함과 해질 무렵의 여유를 비교하고, 본인이 선호하는 시간대와 이유를 이야기.</span></p>
-              <p class="line"><b>박정규</b><span>지금까지 탄 코스 중 가장 다시 가고 싶은 길은 어디인가요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>만경강 자전거길, 바닷가 해안도로, 숲길 등 다시 가고 싶은 코스와 그 이유.</span></p>
+              <p class="line"><b>박정규</b><span>탄감자를 이끌면서 앞으로 어떤 방향으로 가고 싶으신가요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>앞으로는 전주와 완주뿐 아니라 익산, 김제 등으로 활동 범위를 넓히고 싶습니다. 각 도시의 명소에 QR을 숨겨두고 자전거로 찾아가 인증하는 미션을 확대하고, 의료생협과 연계한 건강 프로그램도 강화하고 싶습니다. 지역 사회와 협력해 자전거 인프라 개선에도 참여하고 싶습니다.</span></p>
+              <p class="line"><b>강왕규</b><span>개인적으로 이루고 싶은 목표도 있으신가요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>장거리 자전거 투어를 통해 전북의 아름다운 길을 기록으로 남기고 싶습니다. 그리고 더 많은 시민들이 자전거를 생활 속 이동수단으로 받아들이도록 만드는 것이 제 꿈입니다.</span></p>
+              <p class="line"><b>박정규</b><span>오늘 방송을 듣는 청취자분들께 한마디 해주신다면요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>자전거는 무겁거나 힘든 도구만은 아니라고 생각합니다. 일상을 아름답게 만드는 친구가 될 수 있습니다. 거창하게 시작하지 않아도 좋으니, 가까운 길부터 작은 도전을 해보셨으면 좋겠습니다.</span></p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>33~42분</span>
-                <h3>토크 4. 기록, 풍경, 일과 운동의 균형</h3>
-              </header>
-              <p class="line"><b>강왕규</b><span>자전거는 기록을 남기는 운동일까요? 풍경을 담는 운동일까요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>속도와 거리 기록의 의미, 사진과 풍경의 기억, 본인에게 자전거가 남기는 것.</span></p>
-              <p class="line"><b>박정규</b><span>병원에서 일하면 체력적으로 이미 많이 쓰일 텐데, 운동을 더하는 이유가 있을까요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>운동이 몸을 더 지치게 하기보다 마음을 회복시키는 경험, 스트레스 해소, 일의 집중도 변화.</span></p>
-            </section>
-
-            <section class="script-block">
-              <header>
-                <span>42~50분</span>
-                <h3>토크 5. 자전거 밖의 운동, 마라톤과 축구</h3>
-              </header>
-              <p class="line"><b>강왕규</b><span>자전거 말고 다른 운동까지 하신다고 들었습니다. 어떤 운동을 하시나요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>마라톤, 축구 등 즐기는 운동과 각 운동을 하게 된 배경을 소개.</span></p>
-              <p class="line"><b>박정규</b><span>자전거 말고 마라톤까지 하게 된 계기는 무엇인가요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>달리기의 매력, 완주 경험, 자전거와 마라톤이 체력과 마음에 주는 차이.</span></p>
-              <p class="line"><b>강왕규</b><span>축구는 어떻게 시작하셨나요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>축구를 시작한 계기, 팀 운동의 재미, 동료들과 함께 움직이는 즐거움.</span></p>
-            </section>
-
-            <section class="script-block">
-              <header>
-                <span>50~55분</span>
-                <h3>토크 6. 앞으로의 목표</h3>
-              </header>
-              <p class="line"><b>박정규</b><span>앞으로 꼭 해보고 싶은 라이딩 목표가 있나요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>도전해보고 싶은 코스, 장거리 라이딩, 대회나 여행 계획을 이야기.</span></p>
-              <p class="line"><b>강왕규</b><span>앞으로의 목표는 "더 빠르게"인가요, "더 오래"인가요, 아니면 "더 즐겁게"인가요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>본인이 생각하는 운동의 방향, 지속 가능하게 즐기는 방법, 앞으로의 다짐.</span></p>
-            </section>
-
-            <section class="script-block">
-              <header>
-                <span>55~57분</span>
+                <span>36~38분</span>
                 <h3>음악 2</h3>
               </header>
-              <p class="cue">토크를 정리하고 클로징으로 넘어가는 전환곡입니다.</p>
+              <p class="cue">탄감자의 방향과 꿈을 정리하고, 6월 라이딩 팁으로 넘어가는 전환곡입니다.</p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>38~46분</span>
+                <h3>토크 4. 6월 라이딩 팁과 코스 추천</h3>
+              </header>
+              <p class="line"><b>강왕규</b><span>6월의 초여름 라이딩 팁을 알려주세요. 어떤 시간대와 준비물이 좋을까요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>아침과 저녁은 비교적 선선해서 상쾌하게 달릴 수 있으니 이 시간대에 계획을 세우면 좋습니다. 오후에는 소나기가 올 수 있으니 우비와 라이트를 챙기고, 수분을 충분히 섭취하는 것이 중요합니다.</span></p>
+              <p class="line"><b>박정규</b><span>추천하고 싶은 코스도 소개해 주세요.</span></p>
+              <p class="line guest-line"><b>김길중</b><span>전주 천변길에서 만경강을 따라 달리는 코스, 완주의 숲길 코스, 익산 미륵사지 주변 자전거길, 김제 지평선길을 추천합니다. 계절마다 풍경이 다르고, 도시와 자연을 함께 느낄 수 있어 매력적입니다.</span></p>
+              <p class="line"><b>강왕규</b><span>건강 팁도 다시 정리해보면 좋겠습니다. 운동 전후 수분 보충, 얇고 통풍이 잘 되는 옷, 그리고 오전이나 해질녘 라이딩을 꼭 기억해 주시면 좋겠습니다.</span></p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>46~48분</span>
+                <h3>음악 3</h3>
+              </header>
+              <p class="cue">청취자 질문과 챌린지 후기 코너로 넘어갑니다.</p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>48~56분</span>
+                <h3>토크 5. 청취자 질문과 챌린지 후기</h3>
+              </header>
+              <p class="line"><b>박정규</b><span>청취자 질문입니다. 탄감자 챌린지에 참여하려면 어떻게 신청하면 될까요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>구글폼과 네이버 밴드를 통해 신청할 수 있습니다. 미션을 수행할 때는 주행 기록과 사진을 함께 제출하면 됩니다.</span></p>
+              <p class="line"><b>강왕규</b><span>탄감자 챌린지에서 가장 기억에 남는 미션은 무엇이었나요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>고산에서 만경강을 바라볼 수 있는 동구나무 미션과 전주 한옥마을 QR 미션이 기억에 남습니다. 익숙한 장소도 자전거로 찾아가면 완전히 다르게 느껴집니다.</span></p>
+              <p class="line"><b>박정규</b><span>탄감자 모임에 가입하고 싶은 분들은 어떻게 하면 좋을까요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>SNS를 통해 신청할 수 있고 초보자도 환영합니다. 빠르게 타는 것보다 안전하게, 즐겁게, 꾸준히 타는 것을 중요하게 생각합니다.</span></p>
+              <p class="line"><b>강왕규</b><span>참여 시민 후기 중 기억나는 말도 소개해 주실 수 있을까요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>처음에는 10km도 힘들었지만 매일 타다 보니 30km도 거뜬했다는 분이 있었고, 자전거로 탄소를 줄인다는 목표가 뿌듯했다는 후기도 있었습니다. 그런 말들이 모임을 계속 움직이게 하는 힘이 됩니다.</span></p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>56~57분</span>
+                <h3>음악 4</h3>
+              </header>
+              <p class="cue">방송 마무리 전 짧은 정리곡입니다.</p>
             </section>
 
             <section class="script-block">
@@ -357,14 +392,12 @@
                 <span>57~60분</span>
                 <h3>클로징</h3>
               </header>
-              <p class="line"><b>강왕규</b><span>병원에서 근무하면서 다방면으로 운동을 하고 계시는 김미경님을 모시고 진행을 하였습니다. 오늘 김미경님은 어떠셨나요?</span></p>
-              <p class="line guest-line"><b>김미경</b><span>오늘 방송 소감, 진행자와 청취자에게 감사 인사, 앞으로도 건강하게 운동하고 싶다는 메시지.</span></p>
-              <p class="line"><b>박정규</b><span>건강은 하루에 완성되는 게 아니라 생활의 리듬으로 쌓인다는 것, 아침의 짧은 라이딩과 퇴근 후의 가벼운 운동, 그리고 피곤할 땐 쉬는 판단까지, 이게 다 건강한 사람의 습관이겠죠.</span></p>
-              <p class="line"><b>강왕규</b><span>맞아요! 운동은 꼭 잘해야 하는 게 아니라, 나를 돌보는 방식이어야 오래 간다고 생각해요. 여름에는 특히 무리하지 마시고, 짧게 하더라도 기분 좋게 끝내셨으면 좋겠습니다.</span></p>
-              <p class="line"><b>박정규</b><span>청취자 여러분도 이번 주에는 땡볕보다 해가 덜 매운 시간에 몸을 움직여 보시면 좋겠습니다. 물 먼저, 그늘 먼저, 휴식 먼저 꼭 기억해주세요.</span></p>
-              <p class="line"><b>강왕규</b><span>지금까지 강왕규였고요.</span></p>
-              <p class="line"><b>박정규</b><span>박정규였습니다.</span></p>
-              <p class="line"><b>함께</b><span>여러분! 건강하게 타세요. 다음에 다시 만나요~!</span></p>
+              <p class="line"><b>박정규</b><span>어느새 마무리할 시간입니다. 4월 이후 탄소를 감축하는 챌린지가 이어졌고, 많은 분들이 자전거를 통해 일상과 환경을 바꾸기 시작했습니다.</span></p>
+              <p class="line"><b>강왕규</b><span>오늘 탄감자의 시작과 목표, 그리고 김길중 대장님의 에피소드와 앞으로의 계획을 들으며, 작은 모임이 어떻게 큰 변화를 만들어가는지 느낄 수 있었습니다.</span></p>
+              <p class="line"><b>박정규</b><span>특히 6월은 초여름으로 접어드는 시기입니다. 아침과 저녁은 시원하지만 오후에는 무더위가 찾아올 수 있으니 물을 자주 마시고 시간대를 잘 선택해 건강하게 라이딩하시길 바랍니다.</span></p>
+              <p class="line"><b>강왕규</b><span>그리고 오늘 탄감자가 여기까지 올 수 있었던 건 대장님과 회원들의 열정 덕분입니다. 대장님이 있어 탄감자가 이만큼 성장했다는 말로 오늘의 마음을 전하고 싶습니다.</span></p>
+              <p class="line"><b>박정규</b><span>탄감자가 앞으로도 지역과 환경, 건강을 연결하는 멋진 모임이 되길 바라며, 우리도 자전거로 지구를 가볍게 해보는 하루가 되었으면 합니다.</span></p>
+              <p class="line"><b>함께</b><span>청취자 여러분, 지금까지 라이딩스타의 박정규와 강왕규였습니다. 건강하고 즐거운 라이딩 되세요!</span></p>
             </section>
           </article>
         </section>
@@ -372,37 +405,37 @@
         <section id="questions-view" class="view" aria-label="질문 카드" hidden>
           <div class="question-grid">
             <article>
-              <h3>자기소개와 시작</h3>
+              <h3>탄감자의 시작</h3>
               <ul>
-                <li>먼저 자기소개 부탁드릴게요.</li>
-                <li>자전거는 어떻게 처음 타게 되셨나요?</li>
+                <li>탄감자가 무엇인지, 어떻게 시작하게 되었는지 소개해 주세요.</li>
+                <li>탄감자 챌린지를 기획하게 된 이유와 목표는 무엇인가요?</li>
+                <li>탄감자가 이루고자 하는 장기적 목표는 무엇인가요?</li>
               </ul>
             </article>
             <article>
-              <h3>라이딩 경험</h3>
+              <h3>에피소드와 교훈</h3>
               <ul>
-                <li>혼자 타는 자전거와 함께 타는 자전거는 어떤 점이 다른가요?</li>
-                <li>지금도 기억나는 장거리 라이딩이 있나요?</li>
-                <li>자전거를 타면서 계절을 가장 많이 느끼는 순간은 언제인가요?</li>
-                <li>새벽 라이딩과 해질 무렵 라이딩 중 더 좋아하는 시간대는 언제인가요?</li>
-                <li>지금까지 탄 코스 중 가장 다시 가고 싶은 길은 어디인가요?</li>
-                <li>자전거는 기록을 남기는 운동일까요? 풍경을 담는 운동일까요?</li>
+                <li>챌린지나 모임을 이끌면서 가장 재미있었던 순간은 무엇이었나요?</li>
+                <li>반대로 힘들거나 아픈 기억도 있을까요?</li>
+                <li>이런 경험을 통해 얻은 교훈은 무엇인가요?</li>
               </ul>
             </article>
             <article>
-              <h3>일과 운동</h3>
+              <h3>방향과 목표</h3>
               <ul>
-                <li>병원에서 일하면 체력적으로 이미 많이 쓰일 텐데, 운동을 더하는 이유가 있을까요?</li>
-                <li>자전거 말고 다른 운동까지 하신다고 들었습니다. 어떤 운동을 하시나요?</li>
-                <li>자전거 말고 마라톤까지 하게 된 계기는 무엇인가요?</li>
-                <li>축구는 어떻게 시작하셨나요?</li>
+                <li>탄감자를 이끌면서 어떤 방향으로 가고 싶으신가요?</li>
+                <li>개인적으로 이루고 싶은 목표는 무엇인가요?</li>
+                <li>청취자들에게 한마디 해주신다면요?</li>
               </ul>
             </article>
             <article>
-              <h3>앞으로의 목표</h3>
+              <h3>라이딩 팁과 참여</h3>
               <ul>
-                <li>앞으로 꼭 해보고 싶은 라이딩 목표가 있나요?</li>
-                <li>앞으로의 목표는 "더 빠르게"인가요, "더 오래"인가요, 아니면 "더 즐겁게"인가요?</li>
+                <li>6월의 초여름 라이딩 팁을 알려주세요.</li>
+                <li>추천하고 싶은 코스가 있나요?</li>
+                <li>챌린지에 참여하려면 어떻게 신청하나요?</li>
+                <li>탄감자 챌린지에서 가장 기억에 남는 미션은 무엇인가요?</li>
+                <li>탄감자 모임에 가입하려면 어떻게 해야 하나요?</li>
               </ul>
             </article>
           </div>
@@ -420,16 +453,17 @@
                 </tr>
               </thead>
               <tbody>
-                <tr><td>1</td><td>오프닝</td><td>5분</td><td>7월 무더위, 한낮 라이딩 주의, 김미경 소개 예고</td></tr>
-                <tr><td>2</td><td>음악 1</td><td>3분</td><td>본격 토크 전환</td></tr>
-                <tr><td>3</td><td>토크 1</td><td>7분</td><td>자기소개, 자전거를 처음 타게 된 계기</td></tr>
-                <tr><td>4</td><td>토크 2</td><td>9분</td><td>혼자 타기와 함께 타기, 장거리 라이딩</td></tr>
-                <tr><td>5</td><td>토크 3</td><td>9분</td><td>계절감, 시간대, 다시 가고 싶은 길</td></tr>
-                <tr><td>6</td><td>토크 4</td><td>9분</td><td>기록과 풍경, 병원 일과 운동의 균형</td></tr>
-                <tr><td>7</td><td>토크 5</td><td>8분</td><td>다른 운동, 마라톤, 축구</td></tr>
-                <tr><td>8</td><td>토크 6</td><td>5분</td><td>앞으로의 라이딩 목표</td></tr>
-                <tr><td>9</td><td>음악 2</td><td>2분</td><td>클로징 전환</td></tr>
-                <tr><td>10</td><td>클로징</td><td>3분</td><td>김미경 소감, 건강한 운동 습관, 마무리 인사</td></tr>
+                <tr><td>1</td><td>오프닝</td><td>4분</td><td>6월 기온, 수분 보충, 초여름 추천 코스</td></tr>
+                <tr><td>2</td><td>음악 1</td><td>2분</td><td>게스트 토크 전환</td></tr>
+                <tr><td>3</td><td>토크 1</td><td>10분</td><td>탄감자의 시작, 챌린지 목표, 장기 비전</td></tr>
+                <tr><td>4</td><td>토크 2</td><td>10분</td><td>재미있는 에피소드, 힘든 기억, 안전의 교훈</td></tr>
+                <tr><td>5</td><td>토크 3</td><td>10분</td><td>앞으로의 방향, 개인 목표, 청취자 메시지</td></tr>
+                <tr><td>6</td><td>음악 2</td><td>2분</td><td>라이딩 팁 코너 전환</td></tr>
+                <tr><td>7</td><td>토크 4</td><td>8분</td><td>6월 라이딩 팁, 전북 추천 코스, 수분 보충</td></tr>
+                <tr><td>8</td><td>음악 3</td><td>2분</td><td>청취자 질문 전환</td></tr>
+                <tr><td>9</td><td>토크 5</td><td>8분</td><td>참여 방법, 기억나는 미션, 시민 후기</td></tr>
+                <tr><td>10</td><td>음악 4</td><td>1분</td><td>클로징 전환</td></tr>
+                <tr><td>11</td><td>클로징</td><td>3분</td><td>탄감자 정리, 김길중 대장님 응원, 마무리 인사</td></tr>
               </tbody>
             </table>
           </div>
@@ -438,10 +472,11 @@
         <section id="check-view" class="view" aria-label="확인 항목" hidden>
           <div class="check-panel">
             <h3>방송 전 확인</h3>
-            <label><input type="checkbox" /> 김미경 방송 소개 정보 확정</label>
-            <label><input type="checkbox" /> 첫 번째 노래, 두 번째 노래 확정</label>
-            <label><input type="checkbox" /> 방송일 기준 날씨 표현 확인</label>
-            <label><input type="checkbox" /> 보령 머드축제 등 여름 축제 언급 최종 확인</label>
+            <label><input type="checkbox" /> 김길중 출연 정보와 호칭 확정</label>
+            <label><input type="checkbox" /> 탄감자 챌린지 신청 경로 확인</label>
+            <label><input type="checkbox" /> 보물찾기 미션과 상품권 표현 확인</label>
+            <label><input type="checkbox" /> 삽입곡 4곡 또는 대체곡 확정</label>
+            <label><input type="checkbox" /> 방송일 기준 날씨와 건강 정보 표현 확인</label>
           </div>
           <div class="source-note">
             <h3>자료 메모</h3>
