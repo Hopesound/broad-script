@@ -15,8 +15,10 @@
 
 ## 회차 파일
 
+- `dubase.html`: 두바세 · 춘천 자전거 모임 이야기 웹페이지
 - `index.html`: 김길중 · 탄감자와 자전거 챌린지 이야기 웹페이지
 - `kim-mikyung.html`: 김미경 · 자전거와 운동이야기 웹페이지
+- `episodes/dubase.md`: 두바세를 만나다
 - `episodes/2026-06-15-tangamja.md`: 탄감자와 자전거 챌린지 이야기
 - `episodes/2026-06-05-riding-star.md`: 자전거와 운동이야기
 
