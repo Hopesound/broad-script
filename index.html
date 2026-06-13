@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>라이딩스타 방송 시나리오</title>
+    <title>벨로혁신 · 두 바퀴로 이어지는 사람들</title>
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
@@ -15,7 +15,7 @@
         <form class="search-form" role="search">
           <label class="search-label" for="script-search">검색</label>
           <div class="search-box">
-            <input id="script-search" type="search" placeholder="예: 탄감자, 보물찾기, 초여름" />
+            <input id="script-search" type="search" placeholder="예: 벨로혁신, 부회장, 총무, 만경강" />
             <button type="button" id="clear-search" class="search-clear" aria-label="검색어 지우기" hidden>×</button>
           </div>
           <button type="submit" id="search-submit">검색</button>
@@ -27,14 +27,14 @@
     </header>
 
     <div class="layout">
-      <aside class="sidebar" id="episode-panel" aria-label="회차 목록">
+            <aside class="sidebar" id="episode-panel" aria-label="회차 목록">
         <div class="sidebar-head">
           <h1>회차 관리</h1>
           <button type="button" id="episode-menu-close" class="sidebar-close" aria-label="회차 관리 닫기">×</button>
         </div>
-        <a class="episode episode-switch" href="dubase.html#script-view" data-episode-key="dubase" data-search-placeholder="예: 두바세, 춘천, 라이딩 문화">
-          <span>방송일 확인 필요</span>
-          <strong>두바세 · 춘천 자전거 모임 이야기</strong>
+        <a class="episode episode-switch current" href="index.html#script-view" data-episode-key="velo" data-search-placeholder="예: 벨로혁신, 부회장, 총무, 만경강" aria-current="page">
+          <span>방송 2026년 8월 예정</span>
+          <strong>벨로혁신 · 두 바퀴로 이어지는 사람들</strong>
           <small>초안 · 60분</small>
         </a>
         <a class="episode episode-switch" href="kim-mikyung.html#script-view" data-episode-key="mikyung" data-search-placeholder="예: 장거리, 마라톤, 축구">
@@ -42,9 +42,14 @@
           <strong>김미경 · 자전거와 운동이야기</strong>
           <small>수정본 · 60분</small>
         </a>
-        <a class="episode episode-switch current" href="index.html#script-view" data-episode-key="giljung" data-search-placeholder="예: 탄감자, 보물찾기, 초여름" aria-current="page">
+        <a class="episode episode-switch" href="tangamja.html#script-view" data-episode-key="giljung" data-search-placeholder="예: 탄감자, 보물찾기, 초여름">
           <span>방송 2026-06-15</span>
           <strong>김길중 · 탄감자와 자전거 챌린지 이야기</strong>
+          <small>초안 · 60분</small>
+        </a>
+        <a class="episode episode-switch" href="dubase.html#script-view" data-episode-key="dubase" data-search-placeholder="예: 두바세, 춘천, 라이딩 문화">
+          <span>방송일 확인 필요</span>
+          <strong>두바세 · 춘천 자전거 모임 이야기</strong>
           <small>초안 · 60분</small>
         </a>
         <div class="sidebar-note">
@@ -60,8 +65,8 @@
       <main class="content">
         <section class="summary" aria-labelledby="page-title">
           <div>
-            <p class="eyebrow">방송 2026년 6월 15일 · 녹음일시 확인 필요</p>
-            <h2 id="page-title">탄감자와 자전거 챌린지 이야기</h2>
+            <p class="eyebrow">방송 2026년 8월 예정 · 벨로혁신 특집</p>
+            <h2 id="page-title">두 바퀴로 이어지는 사람들</h2>
           </div>
           <dl class="meta-grid">
             <div>
@@ -70,11 +75,11 @@
             </div>
             <div>
               <dt>출연</dt>
-              <dd>김길중</dd>
+              <dd>벨로혁신 부회장 · 총무</dd>
             </div>
             <div>
               <dt>방송일시</dt>
-              <dd>2026-06-15</dd>
+              <dd>2026년 8월 예정</dd>
             </div>
             <div>
               <dt>분량</dt>
@@ -102,7 +107,7 @@
               <tbody>
                 <tr>
                   <th>프로그램명</th>
-                  <td>라이딩스타(탄감자와 자전거 챌린지 이야기)</td>
+                  <td>라이딩스타(벨로혁신, 두 바퀴로 이어지는 사람들)</td>
                 </tr>
                 <tr>
                   <th>진행</th>
@@ -110,7 +115,7 @@
                 </tr>
                 <tr>
                   <th>출연</th>
-                  <td><span class="guest-name">김길중</span></td>
+                  <td><span class="guest-name">벨로혁신 부회장, 벨로혁신 총무</span></td>
                 </tr>
                 <tr>
                   <th>녹음장소</th>
@@ -122,7 +127,7 @@
                 </tr>
                 <tr>
                   <th>방송일시</th>
-                  <td>2026년 6월 15일</td>
+                  <td>2026년 8월 예정</td>
                 </tr>
               </tbody>
             </table>
@@ -138,21 +143,20 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>오프닝</strong><small>6월 초여름</small></td>
+                  <td><strong>오프닝</strong><small>여름 인사</small></td>
                   <td>0~4분<br /><span>(4')</span></td>
                   <td>
                     <ul>
-                      <li>진행자 인사, 6월 초여름 라이딩</li>
-                      <li>20℃ 안팎 아침, 28℃ 낮 기온 안내</li>
-                      <li>수분 보충, 아침·해질녘 라이딩 권장</li>
-                      <li>강변길, 숲길, 산과 바닷가 코스 추천</li>
+                      <li>8월 여름 라이딩</li>
+                      <li>한낮 라이딩 주의와 컨디션 관리</li>
+                      <li>자전거가 일상에 남기는 기분</li>
                     </ul>
                   </td>
                   <td>진행자</td>
                 </tr>
                 <tr>
                   <td><strong>음악 1</strong><small>전환곡</small></td>
-                  <td>4~6분<br /><span>(2')</span></td>
+                  <td>4~8분<br /><span>(4')</span></td>
                   <td>
                     <ul>
                       <li>게스트 토크 전환</li>
@@ -161,102 +165,102 @@
                   <td>진행자</td>
                 </tr>
                 <tr>
-                  <td><strong>토크 1</strong><small>시작과 목표</small></td>
-                  <td>6~16분<br /><span>(10')</span></td>
+                  <td><strong>게스트 소개와 가입 배경</strong><small>게스트 토크</small></td>
+                  <td>8~16분<br /><span>(8')</span></td>
                   <td>
                     <ul>
-                      <li>탄감자 모임의 시작</li>
-                      <li>탄소 감축 챌린지 기획 이유</li>
-                      <li>장기적 목표</li>
+                      <li>부회장·총무 인사</li>
+                      <li>벨로혁신 가입 계기와 첫인상</li>
                     </ul>
                   </td>
-                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
+                  <td>진행자 &amp;<br /><span class="guest-name">부회장 · 총무</span></td>
                 </tr>
                 <tr>
-                  <td><strong>토크 2</strong><small>에피소드</small></td>
-                  <td>16~26분<br /><span>(10')</span></td>
+                  <td><strong>과거의 자전거 추억</strong><small>게스트 토크</small></td>
+                  <td>16~25분<br /><span>(9')</span></td>
                   <td>
                     <ul>
-                      <li>챌린지와 모임의 재미있는 순간</li>
-                      <li>힘들거나 위험했던 기억</li>
-                      <li>안전과 함께 타기의 교훈</li>
+                      <li>어린 시절 자전거</li>
+                      <li>다시 시작한 계기</li>
+                      <li>예전과 지금의 차이</li>
                     </ul>
                   </td>
-                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
+                  <td>진행자 &amp;<br /><span class="guest-name">부회장 · 총무</span></td>
                 </tr>
                 <tr>
-                  <td><strong>토크 3</strong><small>방향과 꿈</small></td>
-                  <td>26~36분<br /><span>(10')</span></td>
+                  <td><strong>음악 2</strong><small>전환곡</small></td>
+                  <td>25~29분<br /><span>(4')</span></td>
                   <td>
                     <ul>
-                      <li>전주·완주 밖으로 확장하는 미션</li>
-                      <li>건강 프로그램과 지역 협력</li>
-                      <li>청취자에게 전하는 한마디</li>
-                    </ul>
-                  </td>
-                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
-                </tr>
-                <tr>
-                  <td><strong>음악 2</strong><small>중간 전환</small></td>
-                  <td>36~38분<br /><span>(2')</span></td>
-                  <td>
-                    <ul>
-                      <li>라이딩 팁 코너로 전환</li>
+                      <li>현재 라이딩 이야기 전환</li>
                     </ul>
                   </td>
                   <td>진행자</td>
                 </tr>
                 <tr>
-                  <td><strong>토크 4</strong><small>팁과 코스</small></td>
-                  <td>38~46분<br /><span>(8')</span></td>
+                  <td><strong>현재 라이딩과 모임 역할</strong><small>게스트 토크</small></td>
+                  <td>29~39분<br /><span>(10')</span></td>
                   <td>
                     <ul>
-                      <li>6월 초여름 라이딩 준비</li>
-                      <li>전주, 완주, 익산, 김제 추천 코스</li>
-                      <li>수분과 통풍 좋은 복장 안내</li>
+                      <li>정기 라이딩</li>
+                      <li>총무 실무</li>
+                      <li>부회장의 안전과 분위기 관리</li>
                     </ul>
                   </td>
-                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
+                  <td>진행자 &amp;<br /><span class="guest-name">부회장 · 총무</span></td>
                 </tr>
                 <tr>
                   <td><strong>음악 3</strong><small>전환곡</small></td>
-                  <td>46~48분<br /><span>(2')</span></td>
+                  <td>39~43분<br /><span>(4')</span></td>
                   <td>
                     <ul>
-                      <li>챌린지 후기 코너로 전환</li>
+                      <li>에피소드와 먹거리 이야기 전환</li>
                     </ul>
                   </td>
                   <td>진행자</td>
                 </tr>
                 <tr>
-                  <td><strong>토크 5</strong><small>챌린지 후기</small></td>
-                  <td>48~56분<br /><span>(8')</span></td>
+                  <td><strong>기억에 남는 라이딩·코스·먹거리</strong><small>게스트 토크</small></td>
+                  <td>43~53분<br /><span>(10')</span></td>
                   <td>
                     <ul>
-                      <li>기억나는 미션</li>
-                      <li>시민 후기 소개</li>
+                      <li>단체 라이딩</li>
+                      <li>힘든 순간</li>
+                      <li>라이딩 후 메뉴와 식사 장소</li>
                     </ul>
                   </td>
-                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
+                  <td>진행자 &amp;<br /><span class="guest-name">부회장 · 총무</span></td>
                 </tr>
                 <tr>
-                  <td><strong>음악 4</strong><small>정리곡</small></td>
-                  <td>56~57분<br /><span>(1')</span></td>
+                  <td><strong>미래 포부와 방향</strong><small>게스트 토크</small></td>
+                  <td>53~57분<br /><span>(4')</span></td>
                   <td>
                     <ul>
-                      <li>클로징 전환</li>
+                      <li>벨로혁신의 성장 방향</li>
+                      <li>개인 목표</li>
+                      <li>새 회원에게 전하는 말</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br /><span class="guest-name">부회장 · 총무</span></td>
+                </tr>
+                <tr>
+                  <td><strong>음악 4</strong><small>전환곡</small></td>
+                  <td>57~59분<br /><span>(2')</span></td>
+                  <td>
+                    <ul>
+                      <li>엔딩 전환</li>
                     </ul>
                   </td>
                   <td>진행자</td>
                 </tr>
                 <tr>
-                  <td><strong>클로징</strong><small>마무리</small></td>
-                  <td>57~60분<br /><span>(3')</span></td>
+                  <td><strong>엔딩</strong><small>마무리</small></td>
+                  <td>59~60분<br /><span>(1')</span></td>
                   <td>
                     <ul>
-                      <li>탄감자 챌린지 정리</li>
-                      <li>김길중님과 회원들의 열정 언급</li>
-                      <li>건강하고 즐거운 라이딩 인사</li>
+                      <li>방송 정리</li>
+                      <li>게스트 마무리 인사</li>
+                      <li>안전 라이딩 인사</li>
                     </ul>
                   </td>
                   <td>진행자</td>
@@ -270,121 +274,257 @@
           <article id="script-copy-source">
             <section class="script-block">
               <header>
-                <span>0~4분</span>
-                <h3>오프닝</h3>
+                <span>00~04</span>
+                <h3>1부. 오프닝</h3>
               </header>
+              <p class="cue">오프닝 멘트</p>
               <p class="line"><b>박정규</b><span>안녕하세요, 만경강을 달리는 아줌마, 라이딩스타의 박정규입니다.</span></p>
               <p class="line"><b>강왕규</b><span>안녕하세요, 페달에 발만 올리면 행복해지는 라이딩스타의 강왕규입니다.</span></p>
-              <p class="line"><b>박정규</b><span>6월이 되니 아침에는 20℃ 안팎으로 선선하고, 오후에는 28℃ 정도까지 올라가면서 초여름의 더위를 느낄 수 있네요. 그래서 아침 라이딩은 상쾌하고 낮에는 조금 더워져 땀이 나지만, 장마가 본격화되기 전이라 여전히 라이딩하기 좋은 날씨입니다.</span></p>
-              <p class="line"><b>강왕규</b><span>맞아요. 이런 날씨에는 고르게 수분을 보충하는 것이 중요합니다. 전문가들은 운동 1~2시간 전에 물 16온스를 마시고, 라이딩 중에는 10~15분마다 조금씩 물을 마시라고 권장해요. 또 햇볕이 강한 한낮보다는 아침이나 해가 질 무렵에 라이딩을 하면 더 쾌적하고, 통풍이 잘되는 옷을 입으면 체온 조절에도 도움이 됩니다.</span></p>
-              <p class="line"><b>박정규</b><span>코스 추천도 빼놓을 수 없죠. 지금 같은 계절에는 강변길이나 숲길처럼 그늘이 있는 코스가 좋고, 주말에는 산이나 바닷가로 짧은 나들이를 떠나 시원한 바람을 만끽하는 것도 좋은 방법입니다. 특히 초여름의 푸른 들판과 강가를 달리다 보면 일상의 스트레스가 싹 사라지는 기분이에요.</span></p>
-              <p class="line"><b>강왕규</b><span>자전거를 타다 보면 작은 일상도 특별해지는 것 같아요. 여러분은 최근 어떤 코스에서 라이딩을 즐기셨나요?</span></p>
-              <p class="line"><b>박정규</b><span>그럼 여기서 노래 한 곡 듣고 본격적인 라이딩 이야기를 이어가겠습니다.</span></p>
+              <p class="line"><b>박정규</b><span>8월입니다. 이제는 정말 여름 한가운데를 지나고 있다는 느낌이 들죠. 아침에는 살짝 바람이 불다가도, 낮이 되면 햇볕이 뜨겁게 내려앉고, 저녁이 되면 또 자전거 타기 좋은 바람이 불어옵니다.</span></p>
+              <p class="line"><b>강왕규</b><span>맞습니다. 요즘 같은 계절에는 한낮의 땡볕 라이딩은 조금 조심해야 합니다. 자전거를 좋아한다고 해서 무조건 달리는 게 아니라, 물도 챙기고, 쉬는 시간도 챙기고, 무엇보다 몸 상태를 먼저 살피는 게 중요하죠.</span></p>
+              <p class="line"><b>박정규</b><span>그래도 여름 라이딩만의 매력은 분명히 있습니다. 땀을 흘리고 난 뒤 마시는 시원한 물 한 모금, 강변을 따라 부는 바람, 라이딩 후 함께 나누는 식사 한 끼. 자전거는 결국 길 위에서 사람을 만나게 하고, 또 사람과 사람을 이어주는 참 신기한 도구인 것 같습니다.</span></p>
+              <p class="line"><b>강왕규</b><span>자전거는 평범한 하루에도 작은 리듬을 만들어줍니다. 출근길에 바람을 느끼고, 강변에서 잠깐 쉬고, 집에 돌아와 오늘 달린 길을 떠올리면 하루가 조금 더 선명해지죠.</span></p>
+              <p class="line"><b>박정규</b><span>그래서 오늘은 자전거가 우리 일상에 남기는 기분, 길 위에서 생기는 관계, 함께 달릴 때 더 오래 기억되는 순간들을 차분히 나눠보려고 합니다.</span></p>
+              <p class="line"><b>강왕규</b><span>8월의 뜨거운 여름밤, 두 바퀴 위에서 만들어지는 사람들의 이야기를 준비했습니다.</span></p>
+              <p class="line"><b>박정규</b><span>그럼 노래 한 곡 듣고 돌아와서 본격적인 이야기 이어가겠습니다.</span></p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>4~6분</span>
+                <span>04~08</span>
                 <h3>음악 1</h3>
               </header>
-              <p class="cue">초여름 라이딩 분위기에 맞는 곡으로 본격적인 이야기를 준비합니다.</p>
+              <p class="cue">게스트 토크로 넘어가는 전환곡입니다.</p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>6~16분</span>
-                <h3>토크 1. 탄감자 모임의 시작과 목표</h3>
+                <span>08~16</span>
+                <h3>2부. 게스트 소개와 벨로혁신 가입 배경</h3>
               </header>
-              <p class="line"><b>강왕규</b><span>4월 말 방송 이후 탄소 감축 챌린지를 진행하셨다고 들었습니다. 이 챌린지를 기획하게 된 이유와 목표는 무엇이었나요?</span></p>
-              <p class="line guest-line"><b>김길중</b><span>4월 말 방송 이후 챌린지를 기획한 배경, 하루 10km 30일 미션과 보물찾기 프로그램 운영 방식, 시민들의 반응을 이야기.</span></p>
-              <p class="line"><b>박정규</b><span>탄감자가 장기적으로 이루고 싶은 목표는 무엇인가요?</span></p>
-              <p class="line guest-line"><b>김길중</b><span>자전거가 생활 속 이동수단으로 자리 잡는 도시, 인프라 확대, 지역경제·건강·환경을 연결하고 싶은 목표를 이야기.</span></p>
+              <p class="cue">게스트 입장</p>
+              <p class="line"><b>강왕규</b><span>노래 듣고 돌아왔습니다. 라이딩스타, 오늘은 벨로혁신 특집으로 함께하고 있습니다. 이번 방송에는 벨로혁신에서 활발히 활동하고 계신 두 분을 모셨습니다. 모임의 중심을 잡아주시는 부회장님, 그리고 실무와 분위기를 함께 챙겨주시는 총무님입니다. 먼저 두 분께 인사 부탁드릴게요.</span></p>
+              <p class="line guest-line"><b>부회장</b><span>안녕하세요. 벨로혁신에서 부회장을 맡고 있는 ○○○입니다.</span></p>
+              <p class="line guest-line"><b>총무</b><span>안녕하세요. 벨로혁신 총무 ○○○입니다. 반갑습니다.</span></p>
+              <p class="line"><b>박정규</b><span>두 분 반갑습니다. 오늘은 아주 편안하게 이야기 나누시면 됩니다. 자전거를 잘 타는 이야기만 하는 방송이 아니라, 자전거를 타면서 생긴 사람 이야기, 추억 이야기, 웃긴 이야기까지 다 나누는 시간입니다.</span></p>
+              <p class="line"><b>강왕규</b><span>먼저 부회장님께 여쭤볼게요. 벨로혁신이라는 모임에 처음 가입하게 된 계기가 무엇이었나요?</span></p>
+              <p class="cue">부회장 답변 유도</p>
+              <p class="cue">지인의 소개</p>
+              <p class="cue">건강 관리</p>
+              <p class="cue">지역 라이딩 관심</p>
+              <p class="cue">혼자 타다가 함께 타고 싶어진 마음</p>
+              <p class="cue">자전거를 다시 시작하게 된 계기</p>
+              <p class="line"><b>박정규</b><span>총무님은 어떠셨나요? 처음부터 적극적으로 모임 활동을 하셨나요, 아니면 조용히 따라가다가 어느 순간 총무까지 맡게 되신 건가요?</span></p>
+              <p class="cue">총무 답변 유도</p>
+              <p class="cue">처음에는 가볍게 참여</p>
+              <p class="cue">모임 분위기가 좋아서 정착</p>
+              <p class="cue">사람들과의 관계</p>
+              <p class="cue">자연스럽게 역할을 맡게 된 과정</p>
+              <p class="line"><b>강왕규</b><span>처음 모임에 들어갈 때는 누구나 약간 긴장하잖아요. ‘내가 따라갈 수 있을까?’, ‘장비가 부족하지 않을까?’, ‘다들 너무 잘 타는 거 아닐까?’ 이런 걱정이 있었을 것 같은데요. 두 분은 처음 벨로혁신에 들어갔을 때 어떤 느낌이셨나요?</span></p>
+              <p class="cue">부회장 / 총무 답변 유도</p>
+              <p class="cue">첫 라이딩의 긴장감</p>
+              <p class="cue">생각보다 따뜻했던 분위기</p>
+              <p class="cue">회원들의 배려</p>
+              <p class="cue">모임에 정착하게 된 결정적 순간</p>
+              <p class="line"><b>박정규</b><span>들어보니까 벨로혁신은 단순히 빠르게 달리는 모임이라기보다는, 함께 달리고 함께 챙기는 분위기가 있는 것 같습니다.</span></p>
+              <p class="line"><b>강왕규</b><span>맞아요. 자전거 모임에서 가장 중요한 건 속도보다 분위기일 때가 많거든요. 그럼 여기서 한 곡 듣고, 두 분의 과거 자전거 추억으로 넘어가보겠습니다.</span></p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>16~26분</span>
-                <h3>토크 2. 재미있는 에피소드와 아픈 기억</h3>
+                <span>16~25</span>
+                <h3>3부. 과거의 자전거 추억</h3>
               </header>
-              <p class="line"><b>강왕규</b><span>챌린지나 모임을 이끌면서 가장 재미있었던 순간은 무엇이었나요?</span></p>
-              <p class="line guest-line"><b>김길중</b><span>첫 시민 자전거 행진, 보물 미션 수행 중 웃음이 났던 순간, 참여자들과 함께했던 즐거운 장면을 소개.</span></p>
-              <p class="line"><b>박정규</b><span>반대로 힘들거나 아픈 기억도 있었을까요?</span></p>
-              <p class="line guest-line"><b>김길중</b><span>교통 인프라가 부족한 구간에서 느낀 위험, 비 오는 날 미끄러운 도로에서의 경험 등 안전을 생각하게 된 기억을 이야기.</span></p>
-              <p class="line"><b>강왕규</b><span>그런 경험을 통해 얻은 교훈이 있다면 무엇인가요?</span></p>
-              <p class="line guest-line"><b>김길중</b><span>안전 장비, 날씨 대비, 함께 타는 것의 중요성, 앞으로 교육과 안전 캠페인을 강화하고 싶은 계획을 이야기.</span></p>
+              <p class="line"><b>박정규</b><span>노래 듣기 전에 바로 이어서 하나만 더 여쭤볼게요. 두 분 모두 자전거를 어릴 때부터 타셨나요? 아니면 성인이 되어서 다시 자전거를 가까이하게 되셨나요?</span></p>
+              <p class="cue">부회장 답변 유도</p>
+              <p class="cue">어린 시절 동네에서 타던 자전거</p>
+              <p class="cue">통학 또는 심부름의 기억</p>
+              <p class="cue">한동안 멀어졌다가 다시 시작한 이야기</p>
+              <p class="cue">총무 답변 유도</p>
+              <p class="cue">처음 자전거를 배운 기억</p>
+              <p class="cue">넘어졌던 기억</p>
+              <p class="cue">친구들과 달리던 골목길</p>
+              <p class="cue">다시 자전거를 만난 계기</p>
+              <p class="line"><b>강왕규</b><span>어릴 때 자전거를 처음 배울 때는 누구나 한 번쯤 넘어지잖아요. 혹시 지금도 기억나는 첫 자전거 추억이 있으신가요?</span></p>
+              <p class="line guest-line"><b>부회장</b><span>답변.</span></p>
+              <p class="line guest-line"><b>총무</b><span>답변.</span></p>
+              <p class="line"><b>박정규</b><span>그 시절 자전거는 지금처럼 운동 장비라기보다 자유의 상징이었던 것 같아요. 집 앞 골목을 벗어나 조금 더 먼 곳으로 갈 수 있게 해준 첫 번째 탈것이었죠.</span></p>
+              <p class="line"><b>강왕규</b><span>맞습니다. 그때는 속도계도 없고, 기록 앱도 없고, 멋진 장비도 없었지만 이상하게 더 신났던 기억이 있어요.</span></p>
+              <p class="line"><b>박정규</b><span>두 분은 예전 자전거와 지금 자전거의 가장 큰 차이를 무엇이라고 느끼시나요?</span></p>
+              <p class="cue">답변 유도</p>
+              <p class="cue">장비의 변화</p>
+              <p class="cue">도로 환경의 변화</p>
+              <p class="cue">자전거를 바라보는 시선 변화</p>
+              <p class="cue">기록과 인증 문화</p>
+              <p class="cue">함께 타는 즐거움</p>
+              <p class="line"><b>강왕규</b><span>그럼 여기서 노래 한 곡 듣고 오겠습니다. 노래가 끝나면 현재 벨로혁신 안에서 두 분이 어떻게 라이딩하고 계신지 들어보겠습니다.</span></p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>26~36분</span>
-                <h3>토크 3. 앞으로의 방향과 꿈</h3>
-              </header>
-              <p class="line"><b>박정규</b><span>탄감자를 이끌면서 앞으로 어떤 방향으로 가고 싶으신가요?</span></p>
-              <p class="line guest-line"><b>김길중</b><span>전주·완주에서 익산·김제 등으로 활동 범위를 넓히는 구상, QR 인증 미션 확대, 건강 프로그램과 지역 협력 방향을 소개.</span></p>
-              <p class="line"><b>강왕규</b><span>개인적으로 이루고 싶은 목표도 있으신가요?</span></p>
-              <p class="line guest-line"><b>김길중</b><span>장거리 자전거 투어, 전북의 아름다운 길 기록, 시민들이 자전거를 생활 이동수단으로 받아들이게 하고 싶은 개인 목표를 이야기.</span></p>
-              <p class="line"><b>박정규</b><span>오늘 방송을 듣는 청취자분들께 한마디 해주신다면요?</span></p>
-              <p class="line guest-line"><b>김길중</b><span>자전거를 일상을 아름답게 만드는 친구로 바라보는 생각, 청취자가 작은 도전부터 시작했으면 하는 메시지를 이야기.</span></p>
-            </section>
-
-            <section class="script-block">
-              <header>
-                <span>36~38분</span>
+                <span>25~29</span>
                 <h3>음악 2</h3>
               </header>
-              <p class="cue">탄감자의 방향과 꿈을 정리하고, 6월 라이딩 팁으로 넘어가는 전환곡입니다.</p>
+              <p class="cue">현재 라이딩 경험과 모임 안에서의 역할로 넘어가는 전환곡입니다.</p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>38~46분</span>
-                <h3>토크 4. 6월 라이딩 팁과 코스 추천</h3>
+                <span>29~39</span>
+                <h3>4부. 현재 라이딩 경험과 모임 안에서의 역할</h3>
               </header>
-              <p class="line"><b>강왕규</b><span>6월의 초여름 라이딩 팁을 알려주세요. 어떤 시간대와 준비물이 좋을까요?</span></p>
-              <p class="line guest-line"><b>김길중</b><span>아침·저녁 시간대 선택, 소나기 대비, 우비와 라이트, 수분 섭취 등 6월 라이딩 준비 방법을 소개.</span></p>
-              <p class="line"><b>박정규</b><span>추천하고 싶은 코스도 소개해 주세요.</span></p>
-              <p class="line guest-line"><b>김길중</b><span>전주 천변길, 만경강, 완주 숲길, 익산 미륵사지, 김제 지평선길 등 추천 코스와 매력을 이야기.</span></p>
-              <p class="line"><b>강왕규</b><span>건강 팁도 다시 정리해보면 좋겠습니다. 운동 전후 수분 보충, 얇고 통풍이 잘 되는 옷, 그리고 오전이나 해질녘 라이딩을 꼭 기억해 주시면 좋겠습니다.</span></p>
+              <p class="line"><b>박정규</b><span>노래 듣고 돌아왔습니다. 이제 현재 이야기로 넘어가 보겠습니다. 부회장님, 요즘은 주로 어떤 라이딩을 즐기고 계신가요?</span></p>
+              <p class="cue">부회장 답변 유도</p>
+              <p class="cue">정기 라이딩</p>
+              <p class="cue">장거리 라이딩</p>
+              <p class="cue">회원들과 함께하는 코스</p>
+              <p class="cue">개인 훈련 또는 건강 목적 라이딩</p>
+              <p class="line"><b>강왕규</b><span>총무님은 모임에서 실무를 많이 챙기실 것 같은데요. 라이딩 공지, 일정 조율, 참석 인원 확인, 식사 장소까지… 총무의 역할이 생각보다 만만치 않잖아요.</span></p>
+              <p class="cue">총무 답변 유도</p>
+              <p class="cue">일정 관리</p>
+              <p class="cue">회원 소통</p>
+              <p class="cue">안전 확인</p>
+              <p class="cue">분위기 메이커 역할</p>
+              <p class="cue">모임 뒤풀이 준비</p>
+              <p class="line"><b>박정규</b><span>총무님께 꼭 여쭤보고 싶었어요. 자전거 모임에서 총무가 제일 많이 듣는 말이 뭔가요?</span></p>
+              <p class="cue">총무 답변 예시 유도</p>
+              <p class="cue">“오늘 어디서 모여요?”</p>
+              <p class="cue">“밥은 어디서 먹어요?”</p>
+              <p class="cue">“몇 km예요?”</p>
+              <p class="cue">“업힐 많아요?”</p>
+              <p class="cue">“저도 따라갈 수 있어요?”</p>
+              <p class="line"><b>강왕규</b><span>아, 그 질문 정말 현실적입니다. 특히 “업힐 많아요?” 이건 라이더들이 제일 긴장하는 질문이죠.</span></p>
+              <p class="line"><b>박정규</b><span>부회장님께도 질문드릴게요. 모임에서 부회장은 분위기를 잡아주는 역할도 하고, 때로는 회원들을 독려하는 역할도 하실 것 같은데요. 벨로혁신 안에서 부회장으로서 가장 신경 쓰는 부분은 무엇인가요?</span></p>
+              <p class="cue">부회장 답변 유도</p>
+              <p class="cue">안전</p>
+              <p class="cue">초보자 배려</p>
+              <p class="cue">회원 간 화합</p>
+              <p class="cue">모임의 지속성</p>
+              <p class="cue">즐겁게 타는 문화</p>
+              <p class="line"><b>강왕규</b><span>두 분 말씀을 듣다 보니, 벨로혁신은 ‘잘 타는 사람’보다 ‘함께 오래 타는 사람’을 더 소중하게 여기는 모임처럼 느껴집니다. 맞나요?</span></p>
+              <p class="cue">부회장 / 총무 답변</p>
+              <p class="line"><b>박정규</b><span>현재 벨로혁신에서 가장 자주 가는 코스나 회원들이 좋아하는 코스가 있다면 소개해 주세요.</span></p>
+              <p class="cue">답변 유도</p>
+              <p class="cue">강변길</p>
+              <p class="cue">혁신도시 주변 코스</p>
+              <p class="cue">만경강 코스</p>
+              <p class="cue">전주·완주 연계 코스</p>
+              <p class="cue">초보자용 코스와 고수용 코스</p>
+              <p class="line"><b>강왕규</b><span>그 코스의 매력은 무엇인가요? 풍경인가요, 길 상태인가요, 아니면 끝나고 먹는 음식인가요?</span></p>
+              <p class="cue">답변 유도</p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>46~48분</span>
+                <span>39~43</span>
                 <h3>음악 3</h3>
               </header>
-              <p class="cue">챌린지 후기 코너로 넘어갑니다.</p>
+              <p class="cue">에피소드와 먹거리 이야기로 넘어가는 전환곡입니다.</p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>48~56분</span>
-                <h3>토크 5. 챌린지 후기</h3>
+                <span>43~53</span>
+                <h3>5부. 기억에 남는 라이딩, 코스, 먹거리, 에피소드</h3>
               </header>
-              <p class="line"><b>강왕규</b><span>탄감자 챌린지에서 가장 기억에 남는 미션은 무엇이었나요?</span></p>
-              <p class="line guest-line"><b>김길중</b><span>고산 동구나무 미션, 전주 한옥마을 QR 미션 등 기억에 남는 미션과 그 이유를 이야기.</span></p>
-              <p class="line"><b>강왕규</b><span>참여 시민 후기 중 기억나는 말도 소개해 주실 수 있을까요?</span></p>
-              <p class="line guest-line"><b>김길중</b><span>참여 시민들의 변화, 10km에서 30km까지 성장한 경험, 탄소 감축 목표에서 느낀 뿌듯함 등 후기를 소개.</span></p>
+              <p class="line"><b>박정규</b><span>노래 듣고 돌아왔습니다. 이제 라이딩스타에서 빠질 수 없는 코너죠. 에피소드와 먹거리 이야기입니다.</span></p>
+              <p class="line"><b>강왕규</b><span>자전거 모임은 이상하게 길 위의 사건들이 오래 기억에 남잖아요. 비를 맞은 날, 펑크 난 날, 길을 잘못 든 날, 누군가 처음 완주한 날. 두 분에게 가장 기억에 남는 라이딩은 언제였나요?</span></p>
+              <p class="cue">부회장 답변 유도</p>
+              <p class="cue">장거리 완주</p>
+              <p class="cue">초보 회원의 성장</p>
+              <p class="cue">단체 라이딩 중 감동적인 순간</p>
+              <p class="cue">뜻밖의 고생이 추억이 된 날</p>
+              <p class="cue">총무 답변 유도</p>
+              <p class="cue">준비는 힘들었지만 즐거웠던 행사</p>
+              <p class="cue">회원들이 잘 따라와줘서 고마웠던 순간</p>
+              <p class="cue">식사 자리에서 빵 터졌던 이야기</p>
+              <p class="cue">단체사진 에피소드</p>
+              <p class="line"><b>박정규</b><span>라이딩 중에 힘든 순간도 있었을 것 같습니다. 체력 차이가 있거나, 날씨가 갑자기 변하거나, 길을 잘못 들 수도 있고요. 그런 상황에서는 어떻게 서로를 챙기시나요?</span></p>
+              <p class="cue">답변 유도</p>
+              <p class="cue">후미 챙기기</p>
+              <p class="cue">쉬어가는 문화</p>
+              <p class="cue">초보자 속도 맞추기</p>
+              <p class="cue">물과 간식 나눔</p>
+              <p class="cue">펑크나 사고 대처</p>
+              <p class="line"><b>강왕규</b><span>이제 먹거리 이야기로 넘어가겠습니다. 라이딩 후에 먹는 음식은 평소보다 두 배는 맛있잖아요. 벨로혁신 회원들이 좋아하는 라이딩 후 메뉴는 무엇인가요?</span></p>
+              <p class="cue">답변 유도</p>
+              <p class="cue">국수</p>
+              <p class="cue">백반</p>
+              <p class="cue">콩국수</p>
+              <p class="cue">막국수</p>
+              <p class="cue">닭갈비</p>
+              <p class="cue">커피와 빵</p>
+              <p class="cue">편의점 보급</p>
+              <p class="cue">지역 맛집</p>
+              <p class="line"><b>박정규</b><span>혹시 먹거리 때문에 코스가 정해진 적도 있나요? 예를 들면 “오늘은 그 집 국수 먹으러 가는 라이딩이다” 같은 거요.</span></p>
+              <p class="cue">총무 답변 유도</p>
+              <p class="line"><b>강왕규</b><span>총무님은 식사 장소 정할 때 제일 어려운 점이 뭔가요? 맛, 거리, 주차, 자전거 세워둘 공간, 회원들 취향… 다 고려해야 하잖아요.</span></p>
+              <p class="cue">총무 답변 유도</p>
+              <p class="line"><b>박정규</b><span>부회장님은 라이딩 후 가장 기억에 남는 한 끼가 있다면요?</span></p>
+              <p class="cue">부회장 답변 유도</p>
+              <p class="line"><b>강왕규</b><span>저는 자전거 모임의 진짜 친밀감은 밥상에서 만들어진다고 생각합니다. 달릴 때는 숨이 차서 말을 못 하지만, 밥 먹을 때는 이야기가 터지잖아요.</span></p>
+              <p class="line"><b>박정규</b><span>맞아요. 그래서 자전거는 길 위에서 한 번 친해지고, 밥상에서 두 번 친해지는 취미인 것 같습니다.</span></p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>56~57분</span>
+                <span>53~57</span>
+                <h3>6부. 미래의 포부와 벨로혁신의 방향</h3>
+              </header>
+              <p class="line"><b>강왕규</b><span>이제 앞으로의 이야기를 해보겠습니다. 부회장님, 벨로혁신이 앞으로 어떤 모임으로 성장했으면 좋겠나요?</span></p>
+              <p class="cue">부회장 답변 유도</p>
+              <p class="cue">안전한 모임</p>
+              <p class="cue">초보자도 편하게 오는 모임</p>
+              <p class="cue">지역과 함께하는 모임</p>
+              <p class="cue">건강한 취미 문화를 만드는 모임</p>
+              <p class="cue">오래 지속되는 모임</p>
+              <p class="line"><b>박정규</b><span>총무님은 실무를 담당하시니까 더 현실적인 바람도 있으실 것 같아요. 앞으로 모임 운영에서 해보고 싶은 변화나 계획이 있으신가요?</span></p>
+              <p class="cue">총무 답변 유도</p>
+              <p class="cue">정기 라이딩 체계화</p>
+              <p class="cue">코스 다양화</p>
+              <p class="cue">회원 소통 강화</p>
+              <p class="cue">가족 라이딩</p>
+              <p class="cue">초보자 교육</p>
+              <p class="cue">안전 캠페인</p>
+              <p class="cue">사진·기록 아카이브</p>
+              <p class="line"><b>강왕규</b><span>두 분 개인적으로도 자전거와 관련해 이루고 싶은 목표가 있으신가요? 장거리 코스, 국토종주, 다른 지역 원정, 해외 라이딩 같은 것도 좋습니다.</span></p>
+              <p class="cue">부회장 답변</p>
+              <p class="cue">총무 답변</p>
+              <p class="line"><b>박정규</b><span>새로운 회원들에게 벨로혁신을 추천한다면 뭐라고 말하고 싶으세요?</span></p>
+              <p class="cue">답변 유도</p>
+              <p class="cue">혼자 타기 외로운 분들</p>
+              <p class="cue">건강을 위해 시작하고 싶은 분들</p>
+              <p class="cue">자전거를 배우고 싶은 분들</p>
+              <p class="cue">좋은 사람들과 함께하고 싶은 분들</p>
+              <p class="line"><b>강왕규</b><span>마지막 질문입니다. 두 분에게 자전거란 무엇인가요?</span></p>
+              <p class="line guest-line"><b>부회장</b><span>한 문장 답변.</span></p>
+              <p class="line guest-line"><b>총무</b><span>한 문장 답변.</span></p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>57~59</span>
                 <h3>음악 4</h3>
               </header>
-              <p class="cue">방송 마무리 전 짧은 정리곡입니다.</p>
+              <p class="cue">엔딩으로 넘어가는 전환곡입니다.</p>
             </section>
 
             <section class="script-block">
               <header>
-                <span>57~60분</span>
-                <h3>클로징</h3>
+                <span>59~60</span>
+                <h3>7부. 엔딩</h3>
               </header>
-              <p class="line"><b>박정규</b><span>어느새 마무리할 시간입니다. 4월 이후 탄소를 감축하는 챌린지가 이어졌고, 많은 분들이 자전거를 통해 일상과 환경을 바꾸기 시작했습니다.</span></p>
-              <p class="line"><b>강왕규</b><span>오늘 탄감자의 시작과 목표, 그리고 김길중 대장님의 에피소드와 앞으로의 계획을 들으며, 작은 모임이 어떻게 큰 변화를 만들어가는지 느낄 수 있었습니다.</span></p>
-              <p class="line"><b>박정규</b><span>특히 6월은 초여름으로 접어드는 시기입니다. 아침과 저녁은 시원하지만 오후에는 무더위가 찾아올 수 있으니 물을 자주 마시고 시간대를 잘 선택해 건강하게 라이딩하시길 바랍니다.</span></p>
-              <p class="line"><b>강왕규</b><span>그리고 오늘 탄감자가 여기까지 올 수 있었던 건 대장님과 회원들의 열정 덕분입니다. 대장님이 있어 탄감자가 이만큼 성장했다는 말로 오늘의 마음을 전하고 싶습니다.</span></p>
-              <p class="line"><b>박정규</b><span>탄감자가 앞으로도 지역과 환경, 건강을 연결하는 멋진 모임이 되길 바라며, 우리도 자전거로 지구를 가볍게 해보는 하루가 되었으면 합니다.</span></p>
-              <p class="line"><b>함께</b><span>청취자 여러분, 지금까지 라이딩스타의 박정규와 강왕규였습니다. 건강하고 즐거운 라이딩 되세요!</span></p>
+              <p class="line"><b>박정규</b><span>노래 듣고 돌아왔습니다. 오늘은 벨로혁신의 부회장님과 총무님을 모시고 가입 배경부터 과거의 추억, 현재의 라이딩, 그리고 앞으로의 포부까지 함께 이야기해봤습니다.</span></p>
+              <p class="line"><b>강왕규</b><span>두 분 이야기를 들으면서 자전거 모임은 단순히 함께 달리는 곳이 아니라는 생각이 들었습니다. 누군가에게는 건강을 되찾는 곳이고, 누군가에게는 친구를 만나는 곳이고, 또 누군가에게는 삶의 활력을 얻는 곳이죠.</span></p>
+              <p class="line"><b>박정규</b><span>특히 부회장님이 말씀해주신 ‘안전하고 오래 함께 타는 모임’, 그리고 총무님이 들려주신 모임을 챙기는 보이지 않는 손길이 인상 깊었습니다. 벨로혁신이 지금처럼 이어질 수 있는 건 이렇게 뒤에서 책임지고 챙기는 분들이 있기 때문이라는 생각이 듭니다.</span></p>
+              <p class="line"><b>강왕규</b><span>자전거는 혼자 타도 좋지만, 함께 타면 더 멀리 갈 수 있습니다. 벨로혁신이 앞으로도 더 많은 사람들에게 좋은 길, 좋은 사람, 좋은 추억을 만들어주는 모임이 되기를 응원하겠습니다.</span></p>
+              <p class="line"><b>박정규</b><span>오늘 함께해주신 두 분께 감사드립니다. 마지막으로 청취자분들께 짧게 인사 부탁드립니다.</span></p>
+              <p class="line guest-line"><b>부회장</b><span>마무리 인사.</span></p>
+              <p class="line guest-line"><b>총무</b><span>마무리 인사.</span></p>
+              <p class="line"><b>강왕규</b><span>라이딩스타는 다음 시간에도 자전거와 사람, 길 위의 이야기를 들고 찾아오겠습니다.</span></p>
+              <p class="line"><b>박정규</b><span>저는 만경강을 달리는 아줌마, 박정규였습니다.</span></p>
+              <p class="line"><b>강왕규</b><span>저는 페달에 발만 올리면 행복해지는 강왕규였습니다.</span></p>
+              <p class="line"><b>함께</b><span>여러분, 안전하고 즐거운 라이딩 하세요!</span></p>
             </section>
           </article>
         </section>
@@ -392,34 +532,33 @@
         <section id="questions-view" class="view" aria-label="질문 카드" hidden>
           <div class="question-grid">
             <article>
-              <h3>모임의 시작</h3>
+              <h3>부회장님 질문</h3>
               <ul>
-                <li>탄감자 챌린지를 기획하게 된 이유와 목표는 무엇인가요?</li>
-                <li>탄감자가 이루고자 하는 장기적 목표는 무엇인가요?</li>
+                <li>벨로혁신에 가입하게 된 계기는 무엇인가요?</li>
+                <li>처음 모임에 나왔을 때 분위기는 어땠나요?</li>
+                <li>부회장으로서 가장 신경 쓰는 부분은 무엇인가요?</li>
+                <li>모임에서 가장 중요하게 생각하는 가치는 무엇인가요?</li>
+                <li>초보 회원들을 어떻게 배려하고 계신가요?</li>
+                <li>기억에 남는 단체 라이딩은 언제였나요?</li>
+                <li>힘들었던 라이딩이 좋은 추억으로 바뀐 경험이 있나요?</li>
+                <li>앞으로 벨로혁신이 어떤 모임이 되었으면 하나요?</li>
+                <li>개인적으로 도전하고 싶은 라이딩 목표가 있나요?</li>
+                <li>부회장님에게 자전거란 무엇인가요?</li>
               </ul>
             </article>
             <article>
-              <h3>에피소드와 교훈</h3>
+              <h3>총무님 질문</h3>
               <ul>
-                <li>챌린지나 모임을 이끌면서 가장 재미있었던 순간은 무엇이었나요?</li>
-                <li>반대로 힘들거나 아픈 기억도 있을까요?</li>
-                <li>이런 경험을 통해 얻은 교훈은 무엇인가요?</li>
-              </ul>
-            </article>
-            <article>
-              <h3>방향과 목표</h3>
-              <ul>
-                <li>탄감자를 이끌면서 어떤 방향으로 가고 싶으신가요?</li>
-                <li>개인적으로 이루고 싶은 목표는 무엇인가요?</li>
-                <li>청취자들에게 한마디 해주신다면요?</li>
-              </ul>
-            </article>
-            <article>
-              <h3>라이딩 팁과 참여</h3>
-              <ul>
-                <li>6월의 초여름 라이딩 팁을 알려주세요.</li>
-                <li>추천하고 싶은 코스가 있나요?</li>
-                <li>탄감자 챌린지에서 가장 기억에 남는 미션은 무엇인가요?</li>
+                <li>벨로혁신에 처음 참여하게 된 계기는 무엇인가요?</li>
+                <li>언제부터 총무 역할을 맡게 되셨나요?</li>
+                <li>총무로서 가장 많이 하는 일은 무엇인가요?</li>
+                <li>라이딩 공지나 일정 조율에서 어려운 점은 무엇인가요?</li>
+                <li>회원들이 가장 자주 묻는 질문은 무엇인가요?</li>
+                <li>식사 장소나 코스 선정은 어떻게 하시나요?</li>
+                <li>모임 분위기를 좋게 만들기 위해 신경 쓰는 부분은 무엇인가요?</li>
+                <li>총무로서 가장 보람 있었던 순간은 언제였나요?</li>
+                <li>앞으로 모임 운영에서 해보고 싶은 일이 있나요?</li>
+                <li>총무님에게 자전거란 무엇인가요?</li>
               </ul>
             </article>
           </div>
@@ -437,17 +576,17 @@
                 </tr>
               </thead>
               <tbody>
-                <tr><td>1</td><td>오프닝</td><td>4분</td><td>6월 기온, 수분 보충, 초여름 추천 코스</td></tr>
-                <tr><td>2</td><td>음악 1</td><td>2분</td><td>게스트 토크 전환</td></tr>
-                <tr><td>3</td><td>토크 1</td><td>10분</td><td>모임의 시작, 챌린지 목표, 장기 비전</td></tr>
-                <tr><td>4</td><td>토크 2</td><td>10분</td><td>재미있는 에피소드, 힘든 기억, 안전의 교훈</td></tr>
-                <tr><td>5</td><td>토크 3</td><td>10분</td><td>앞으로의 방향, 개인 목표, 청취자 메시지</td></tr>
-                <tr><td>6</td><td>음악 2</td><td>2분</td><td>라이딩 팁 코너 전환</td></tr>
-                <tr><td>7</td><td>토크 4</td><td>8분</td><td>6월 라이딩 팁, 전북 추천 코스, 수분 보충</td></tr>
-                <tr><td>8</td><td>음악 3</td><td>2분</td><td>챌린지 후기 전환</td></tr>
-                <tr><td>9</td><td>토크 5</td><td>8분</td><td>기억나는 미션, 시민 후기</td></tr>
-                <tr><td>10</td><td>음악 4</td><td>1분</td><td>클로징 전환</td></tr>
-                <tr><td>11</td><td>클로징</td><td>3분</td><td>탄감자 정리, 김길중 대장님 응원, 마무리 인사</td></tr>
+                <tr><td>1</td><td>오프닝</td><td>4분</td><td>8월 여름 라이딩, 한낮 라이딩 주의, 자전거가 일상에 남기는 기분</td></tr>
+                <tr><td>2</td><td>음악 1</td><td>4분</td><td>게스트 토크 전환</td></tr>
+                <tr><td>3</td><td>게스트 소개와 가입 배경</td><td>8분</td><td>부회장·총무 인사, 벨로혁신 가입 계기와 첫인상</td></tr>
+                <tr><td>4</td><td>과거의 자전거 추억</td><td>9분</td><td>어린 시절 자전거, 다시 시작한 계기, 예전과 지금의 차이</td></tr>
+                <tr><td>5</td><td>음악 2</td><td>4분</td><td>현재 라이딩 이야기 전환</td></tr>
+                <tr><td>6</td><td>현재 라이딩과 모임 역할</td><td>10분</td><td>정기 라이딩, 총무 실무, 부회장의 안전과 분위기 관리</td></tr>
+                <tr><td>7</td><td>음악 3</td><td>4분</td><td>에피소드와 먹거리 이야기 전환</td></tr>
+                <tr><td>8</td><td>기억에 남는 라이딩·코스·먹거리</td><td>10분</td><td>단체 라이딩, 힘든 순간, 라이딩 후 메뉴와 식사 장소</td></tr>
+                <tr><td>9</td><td>미래 포부와 방향</td><td>4분</td><td>벨로혁신의 성장 방향, 개인 목표, 새 회원에게 전하는 말</td></tr>
+                <tr><td>10</td><td>음악 4</td><td>2분</td><td>엔딩 전환</td></tr>
+                <tr><td>11</td><td>엔딩</td><td>1분</td><td>방송 정리, 게스트 마무리 인사, 안전 라이딩 인사</td></tr>
               </tbody>
             </table>
           </div>
@@ -456,15 +595,16 @@
         <section id="check-view" class="view" aria-label="확인 항목" hidden>
           <div class="check-panel">
             <h3>방송 전 확인</h3>
-            <label><input type="checkbox" /> 김길중 출연 정보와 호칭 확정</label>
-            <label><input type="checkbox" /> 탄감자 챌린지 신청 경로 확인</label>
-            <label><input type="checkbox" /> 보물찾기 미션과 상품권 표현 확인</label>
+            <label><input type="checkbox" /> 부회장님과 총무님의 성함 및 호칭 확정</label>
+            <label><input type="checkbox" /> 녹음일시와 방송일시 최종 확정</label>
+            <label><input type="checkbox" /> 벨로혁신 표기와 모임 소개 범위 확인</label>
+            <label><input type="checkbox" /> 자주 가는 코스와 맛집 실명 언급 가능 범위 확인</label>
             <label><input type="checkbox" /> 삽입곡 4곡 또는 대체곡 확정</label>
-            <label><input type="checkbox" /> 방송일 기준 날씨와 건강 정보 표현 확인</label>
+            <label><input type="checkbox" /> 8월 날씨와 여름 라이딩 안전 멘트 최종 확인</label>
           </div>
           <div class="source-note">
             <h3>자료 메모</h3>
-            <p>특이사항 확인 중</p>
+            <p>사용자 제공 TXT 원고를 기준으로 벨로혁신 8월 특집 시나리오를 반영했습니다.</p>
           </div>
         </section>
       </main>

@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>라이딩스타 방송 시나리오</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="https://riding-star.vercel.app/" aria-label="Riding-star 메인페이지로 이동">
+        <img class="brand-logo" src="assets/riding-star-logo-transparent.png" alt="라이딩스타" width="1152" height="503" />
+      </a>
+      <div class="toolbar" aria-label="문서 도구">
+        <form class="search-form" role="search">
+          <label class="search-label" for="script-search">검색</label>
+          <div class="search-box">
+            <input id="script-search" type="search" placeholder="예: 탄감자, 보물찾기, 초여름" />
+            <button type="button" id="clear-search" class="search-clear" aria-label="검색어 지우기" hidden>×</button>
+          </div>
+          <button type="submit" id="search-submit">검색</button>
+        </form>
+        <button type="button" id="episode-menu-toggle" class="episode-menu-toggle" aria-controls="episode-panel" aria-expanded="false">회차 관리</button>
+        <button type="button" id="copy-script">대본 복사</button>
+        <button type="button" id="print-page">인쇄</button>
+      </div>
+    </header>
+
+    <div class="layout">
+                  <aside class="sidebar" id="episode-panel" aria-label="회차 목록">
+        <div class="sidebar-head">
+          <h1>회차 관리</h1>
+          <button type="button" id="episode-menu-close" class="sidebar-close" aria-label="회차 관리 닫기">×</button>
+        </div>
+        <a class="episode episode-switch" href="index.html#script-view" data-episode-key="velo" data-search-placeholder="예: 벨로혁신, 부회장, 총무, 만경강">
+          <span>방송 2026년 8월 예정</span>
+          <strong>벨로혁신 · 두 바퀴로 이어지는 사람들</strong>
+          <small>초안 · 60분</small>
+        </a>
+        <a class="episode episode-switch" href="kim-mikyung.html#script-view" data-episode-key="mikyung" data-search-placeholder="예: 장거리, 마라톤, 축구">
+          <span>방송 2026-07-13</span>
+          <strong>김미경 · 자전거와 운동이야기</strong>
+          <small>수정본 · 60분</small>
+        </a>
+        <a class="episode episode-switch current" href="tangamja.html#script-view" data-episode-key="giljung" data-search-placeholder="예: 탄감자, 보물찾기, 초여름" aria-current="page">
+          <span>방송 2026-06-15</span>
+          <strong>김길중 · 탄감자와 자전거 챌린지 이야기</strong>
+          <small>초안 · 60분</small>
+        </a>
+        <a class="episode episode-switch" href="dubase.html#script-view" data-episode-key="dubase" data-search-placeholder="예: 두바세, 춘천, 라이딩 문화">
+          <span>방송일 확인 필요</span>
+          <strong>두바세 · 춘천 자전거 모임 이야기</strong>
+          <small>초안 · 60분</small>
+        </a>
+        <div class="sidebar-note">
+          <strong>회차 선택 안내</strong>
+          <ul>
+            <li>게스트 이름을 클릭하면 오른쪽 내용이 전환됩니다.</li>
+            <li>큐시트와 시나리오는 상단 탭에서 선택합니다.</li>
+            <li>회차별 확인 사항은 오른쪽 확인 탭에서 봅니다.</li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section class="summary" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow">방송 2026년 6월 15일 · 녹음일시 확인 필요</p>
+            <h2 id="page-title">탄감자와 자전거 챌린지 이야기</h2>
+          </div>
+          <dl class="meta-grid">
+            <div>
+              <dt>진행</dt>
+              <dd>박정규 · 강왕규</dd>
+            </div>
+            <div>
+              <dt>출연</dt>
+              <dd>김길중</dd>
+            </div>
+            <div>
+              <dt>방송일시</dt>
+              <dd>2026-06-15</dd>
+            </div>
+            <div>
+              <dt>분량</dt>
+              <dd>60분</dd>
+            </div>
+          </dl>
+        </section>
+
+        <nav class="tabs" aria-label="보기 전환">
+          <button type="button" data-view="cue-view">큐시트</button>
+          <button type="button" class="active" data-view="script-view">전체 대본</button>
+          <button type="button" data-view="questions-view">질문 카드</button>
+          <button type="button" data-view="run-view">진행표</button>
+          <button type="button" data-view="check-view">확인</button>
+        </nav>
+
+        <section id="cue-view" class="view cue-view" aria-label="큐시트" hidden>
+          <article class="cue-sheet">
+            <header class="cue-title">
+              <h3>[큐시트] 주제토크방송</h3>
+              <p>전주공동체라디오 <strong>93.5MHz</strong></p>
+            </header>
+
+            <table class="cue-meta" aria-label="큐시트 기본 정보">
+              <tbody>
+                <tr>
+                  <th>프로그램명</th>
+                  <td>라이딩스타(탄감자와 자전거 챌린지 이야기)</td>
+                </tr>
+                <tr>
+                  <th>진행</th>
+                  <td>박정규, 강왕규</td>
+                </tr>
+                <tr>
+                  <th>출연</th>
+                  <td><span class="guest-name">김길중</span></td>
+                </tr>
+                <tr>
+                  <th>녹음장소</th>
+                  <td>방송실</td>
+                </tr>
+                <tr>
+                  <th>녹음일시</th>
+                  <td>확인 필요</td>
+                </tr>
+                <tr>
+                  <th>방송일시</th>
+                  <td>2026년 6월 15일</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="cue-table" aria-label="큐시트 진행 흐름">
+              <thead>
+                <tr>
+                  <th>구성</th>
+                  <th>시간</th>
+                  <th>세부사항</th>
+                  <th>출연</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>오프닝</strong><small>6월 초여름</small></td>
+                  <td>0~4분<br /><span>(4')</span></td>
+                  <td>
+                    <ul>
+                      <li>진행자 인사, 6월 초여름 라이딩</li>
+                      <li>20℃ 안팎 아침, 28℃ 낮 기온 안내</li>
+                      <li>수분 보충, 아침·해질녘 라이딩 권장</li>
+                      <li>강변길, 숲길, 산과 바닷가 코스 추천</li>
+                    </ul>
+                  </td>
+                  <td>진행자</td>
+                </tr>
+                <tr>
+                  <td><strong>음악 1</strong><small>전환곡</small></td>
+                  <td>4~6분<br /><span>(2')</span></td>
+                  <td>
+                    <ul>
+                      <li>게스트 토크 전환</li>
+                    </ul>
+                  </td>
+                  <td>진행자</td>
+                </tr>
+                <tr>
+                  <td><strong>토크 1</strong><small>시작과 목표</small></td>
+                  <td>6~16분<br /><span>(10')</span></td>
+                  <td>
+                    <ul>
+                      <li>탄감자 모임의 시작</li>
+                      <li>탄소 감축 챌린지 기획 이유</li>
+                      <li>장기적 목표</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
+                </tr>
+                <tr>
+                  <td><strong>토크 2</strong><small>에피소드</small></td>
+                  <td>16~26분<br /><span>(10')</span></td>
+                  <td>
+                    <ul>
+                      <li>챌린지와 모임의 재미있는 순간</li>
+                      <li>힘들거나 위험했던 기억</li>
+                      <li>안전과 함께 타기의 교훈</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
+                </tr>
+                <tr>
+                  <td><strong>토크 3</strong><small>방향과 꿈</small></td>
+                  <td>26~36분<br /><span>(10')</span></td>
+                  <td>
+                    <ul>
+                      <li>전주·완주 밖으로 확장하는 미션</li>
+                      <li>건강 프로그램과 지역 협력</li>
+                      <li>청취자에게 전하는 한마디</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
+                </tr>
+                <tr>
+                  <td><strong>음악 2</strong><small>중간 전환</small></td>
+                  <td>36~38분<br /><span>(2')</span></td>
+                  <td>
+                    <ul>
+                      <li>라이딩 팁 코너로 전환</li>
+                    </ul>
+                  </td>
+                  <td>진행자</td>
+                </tr>
+                <tr>
+                  <td><strong>토크 4</strong><small>팁과 코스</small></td>
+                  <td>38~46분<br /><span>(8')</span></td>
+                  <td>
+                    <ul>
+                      <li>6월 초여름 라이딩 준비</li>
+                      <li>전주, 완주, 익산, 김제 추천 코스</li>
+                      <li>수분과 통풍 좋은 복장 안내</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
+                </tr>
+                <tr>
+                  <td><strong>음악 3</strong><small>전환곡</small></td>
+                  <td>46~48분<br /><span>(2')</span></td>
+                  <td>
+                    <ul>
+                      <li>챌린지 후기 코너로 전환</li>
+                    </ul>
+                  </td>
+                  <td>진행자</td>
+                </tr>
+                <tr>
+                  <td><strong>토크 5</strong><small>챌린지 후기</small></td>
+                  <td>48~56분<br /><span>(8')</span></td>
+                  <td>
+                    <ul>
+                      <li>기억나는 미션</li>
+                      <li>시민 후기 소개</li>
+                    </ul>
+                  </td>
+                  <td>진행자 &amp;<br /><span class="guest-name">김길중</span></td>
+                </tr>
+                <tr>
+                  <td><strong>음악 4</strong><small>정리곡</small></td>
+                  <td>56~57분<br /><span>(1')</span></td>
+                  <td>
+                    <ul>
+                      <li>클로징 전환</li>
+                    </ul>
+                  </td>
+                  <td>진행자</td>
+                </tr>
+                <tr>
+                  <td><strong>클로징</strong><small>마무리</small></td>
+                  <td>57~60분<br /><span>(3')</span></td>
+                  <td>
+                    <ul>
+                      <li>탄감자 챌린지 정리</li>
+                      <li>김길중님과 회원들의 열정 언급</li>
+                      <li>건강하고 즐거운 라이딩 인사</li>
+                    </ul>
+                  </td>
+                  <td>진행자</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+
+        <section id="script-view" class="view active" aria-label="전체 대본">
+          <article id="script-copy-source">
+            <section class="script-block">
+              <header>
+                <span>0~4분</span>
+                <h3>오프닝</h3>
+              </header>
+              <p class="line"><b>박정규</b><span>안녕하세요, 만경강을 달리는 아줌마, 라이딩스타의 박정규입니다.</span></p>
+              <p class="line"><b>강왕규</b><span>안녕하세요, 페달에 발만 올리면 행복해지는 라이딩스타의 강왕규입니다.</span></p>
+              <p class="line"><b>박정규</b><span>6월이 되니 아침에는 20℃ 안팎으로 선선하고, 오후에는 28℃ 정도까지 올라가면서 초여름의 더위를 느낄 수 있네요. 그래서 아침 라이딩은 상쾌하고 낮에는 조금 더워져 땀이 나지만, 장마가 본격화되기 전이라 여전히 라이딩하기 좋은 날씨입니다.</span></p>
+              <p class="line"><b>강왕규</b><span>맞아요. 이런 날씨에는 고르게 수분을 보충하는 것이 중요합니다. 전문가들은 운동 1~2시간 전에 물 16온스를 마시고, 라이딩 중에는 10~15분마다 조금씩 물을 마시라고 권장해요. 또 햇볕이 강한 한낮보다는 아침이나 해가 질 무렵에 라이딩을 하면 더 쾌적하고, 통풍이 잘되는 옷을 입으면 체온 조절에도 도움이 됩니다.</span></p>
+              <p class="line"><b>박정규</b><span>코스 추천도 빼놓을 수 없죠. 지금 같은 계절에는 강변길이나 숲길처럼 그늘이 있는 코스가 좋고, 주말에는 산이나 바닷가로 짧은 나들이를 떠나 시원한 바람을 만끽하는 것도 좋은 방법입니다. 특히 초여름의 푸른 들판과 강가를 달리다 보면 일상의 스트레스가 싹 사라지는 기분이에요.</span></p>
+              <p class="line"><b>강왕규</b><span>자전거를 타다 보면 작은 일상도 특별해지는 것 같아요. 여러분은 최근 어떤 코스에서 라이딩을 즐기셨나요?</span></p>
+              <p class="line"><b>박정규</b><span>그럼 여기서 노래 한 곡 듣고 본격적인 라이딩 이야기를 이어가겠습니다.</span></p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>4~6분</span>
+                <h3>음악 1</h3>
+              </header>
+              <p class="cue">초여름 라이딩 분위기에 맞는 곡으로 본격적인 이야기를 준비합니다.</p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>6~16분</span>
+                <h3>토크 1. 탄감자 모임의 시작과 목표</h3>
+              </header>
+              <p class="line"><b>강왕규</b><span>4월 말 방송 이후 탄소 감축 챌린지를 진행하셨다고 들었습니다. 이 챌린지를 기획하게 된 이유와 목표는 무엇이었나요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>4월 말 방송 이후 챌린지를 기획한 배경, 하루 10km 30일 미션과 보물찾기 프로그램 운영 방식, 시민들의 반응을 이야기.</span></p>
+              <p class="line"><b>박정규</b><span>탄감자가 장기적으로 이루고 싶은 목표는 무엇인가요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>자전거가 생활 속 이동수단으로 자리 잡는 도시, 인프라 확대, 지역경제·건강·환경을 연결하고 싶은 목표를 이야기.</span></p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>16~26분</span>
+                <h3>토크 2. 재미있는 에피소드와 아픈 기억</h3>
+              </header>
+              <p class="line"><b>강왕규</b><span>챌린지나 모임을 이끌면서 가장 재미있었던 순간은 무엇이었나요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>첫 시민 자전거 행진, 보물 미션 수행 중 웃음이 났던 순간, 참여자들과 함께했던 즐거운 장면을 소개.</span></p>
+              <p class="line"><b>박정규</b><span>반대로 힘들거나 아픈 기억도 있었을까요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>교통 인프라가 부족한 구간에서 느낀 위험, 비 오는 날 미끄러운 도로에서의 경험 등 안전을 생각하게 된 기억을 이야기.</span></p>
+              <p class="line"><b>강왕규</b><span>그런 경험을 통해 얻은 교훈이 있다면 무엇인가요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>안전 장비, 날씨 대비, 함께 타는 것의 중요성, 앞으로 교육과 안전 캠페인을 강화하고 싶은 계획을 이야기.</span></p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>26~36분</span>
+                <h3>토크 3. 앞으로의 방향과 꿈</h3>
+              </header>
+              <p class="line"><b>박정규</b><span>탄감자를 이끌면서 앞으로 어떤 방향으로 가고 싶으신가요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>전주·완주에서 익산·김제 등으로 활동 범위를 넓히는 구상, QR 인증 미션 확대, 건강 프로그램과 지역 협력 방향을 소개.</span></p>
+              <p class="line"><b>강왕규</b><span>개인적으로 이루고 싶은 목표도 있으신가요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>장거리 자전거 투어, 전북의 아름다운 길 기록, 시민들이 자전거를 생활 이동수단으로 받아들이게 하고 싶은 개인 목표를 이야기.</span></p>
+              <p class="line"><b>박정규</b><span>오늘 방송을 듣는 청취자분들께 한마디 해주신다면요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>자전거를 일상을 아름답게 만드는 친구로 바라보는 생각, 청취자가 작은 도전부터 시작했으면 하는 메시지를 이야기.</span></p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>36~38분</span>
+                <h3>음악 2</h3>
+              </header>
+              <p class="cue">탄감자의 방향과 꿈을 정리하고, 6월 라이딩 팁으로 넘어가는 전환곡입니다.</p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>38~46분</span>
+                <h3>토크 4. 6월 라이딩 팁과 코스 추천</h3>
+              </header>
+              <p class="line"><b>강왕규</b><span>6월의 초여름 라이딩 팁을 알려주세요. 어떤 시간대와 준비물이 좋을까요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>아침·저녁 시간대 선택, 소나기 대비, 우비와 라이트, 수분 섭취 등 6월 라이딩 준비 방법을 소개.</span></p>
+              <p class="line"><b>박정규</b><span>추천하고 싶은 코스도 소개해 주세요.</span></p>
+              <p class="line guest-line"><b>김길중</b><span>전주 천변길, 만경강, 완주 숲길, 익산 미륵사지, 김제 지평선길 등 추천 코스와 매력을 이야기.</span></p>
+              <p class="line"><b>강왕규</b><span>건강 팁도 다시 정리해보면 좋겠습니다. 운동 전후 수분 보충, 얇고 통풍이 잘 되는 옷, 그리고 오전이나 해질녘 라이딩을 꼭 기억해 주시면 좋겠습니다.</span></p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>46~48분</span>
+                <h3>음악 3</h3>
+              </header>
+              <p class="cue">챌린지 후기 코너로 넘어갑니다.</p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>48~56분</span>
+                <h3>토크 5. 챌린지 후기</h3>
+              </header>
+              <p class="line"><b>강왕규</b><span>탄감자 챌린지에서 가장 기억에 남는 미션은 무엇이었나요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>고산 동구나무 미션, 전주 한옥마을 QR 미션 등 기억에 남는 미션과 그 이유를 이야기.</span></p>
+              <p class="line"><b>강왕규</b><span>참여 시민 후기 중 기억나는 말도 소개해 주실 수 있을까요?</span></p>
+              <p class="line guest-line"><b>김길중</b><span>참여 시민들의 변화, 10km에서 30km까지 성장한 경험, 탄소 감축 목표에서 느낀 뿌듯함 등 후기를 소개.</span></p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>56~57분</span>
+                <h3>음악 4</h3>
+              </header>
+              <p class="cue">방송 마무리 전 짧은 정리곡입니다.</p>
+            </section>
+
+            <section class="script-block">
+              <header>
+                <span>57~60분</span>
+                <h3>클로징</h3>
+              </header>
+              <p class="line"><b>박정규</b><span>어느새 마무리할 시간입니다. 4월 이후 탄소를 감축하는 챌린지가 이어졌고, 많은 분들이 자전거를 통해 일상과 환경을 바꾸기 시작했습니다.</span></p>
+              <p class="line"><b>강왕규</b><span>오늘 탄감자의 시작과 목표, 그리고 김길중 대장님의 에피소드와 앞으로의 계획을 들으며, 작은 모임이 어떻게 큰 변화를 만들어가는지 느낄 수 있었습니다.</span></p>
+              <p class="line"><b>박정규</b><span>특히 6월은 초여름으로 접어드는 시기입니다. 아침과 저녁은 시원하지만 오후에는 무더위가 찾아올 수 있으니 물을 자주 마시고 시간대를 잘 선택해 건강하게 라이딩하시길 바랍니다.</span></p>
+              <p class="line"><b>강왕규</b><span>그리고 오늘 탄감자가 여기까지 올 수 있었던 건 대장님과 회원들의 열정 덕분입니다. 대장님이 있어 탄감자가 이만큼 성장했다는 말로 오늘의 마음을 전하고 싶습니다.</span></p>
+              <p class="line"><b>박정규</b><span>탄감자가 앞으로도 지역과 환경, 건강을 연결하는 멋진 모임이 되길 바라며, 우리도 자전거로 지구를 가볍게 해보는 하루가 되었으면 합니다.</span></p>
+              <p class="line"><b>함께</b><span>청취자 여러분, 지금까지 라이딩스타의 박정규와 강왕규였습니다. 건강하고 즐거운 라이딩 되세요!</span></p>
+            </section>
+          </article>
+        </section>
+
+        <section id="questions-view" class="view" aria-label="질문 카드" hidden>
+          <div class="question-grid">
+            <article>
+              <h3>모임의 시작</h3>
+              <ul>
+                <li>탄감자 챌린지를 기획하게 된 이유와 목표는 무엇인가요?</li>
+                <li>탄감자가 이루고자 하는 장기적 목표는 무엇인가요?</li>
+              </ul>
+            </article>
+            <article>
+              <h3>에피소드와 교훈</h3>
+              <ul>
+                <li>챌린지나 모임을 이끌면서 가장 재미있었던 순간은 무엇이었나요?</li>
+                <li>반대로 힘들거나 아픈 기억도 있을까요?</li>
+                <li>이런 경험을 통해 얻은 교훈은 무엇인가요?</li>
+              </ul>
+            </article>
+            <article>
+              <h3>방향과 목표</h3>
+              <ul>
+                <li>탄감자를 이끌면서 어떤 방향으로 가고 싶으신가요?</li>
+                <li>개인적으로 이루고 싶은 목표는 무엇인가요?</li>
+                <li>청취자들에게 한마디 해주신다면요?</li>
+              </ul>
+            </article>
+            <article>
+              <h3>라이딩 팁과 참여</h3>
+              <ul>
+                <li>6월의 초여름 라이딩 팁을 알려주세요.</li>
+                <li>추천하고 싶은 코스가 있나요?</li>
+                <li>탄감자 챌린지에서 가장 기억에 남는 미션은 무엇인가요?</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="run-view" class="view" aria-label="진행표" hidden>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>순서</th>
+                  <th>코너</th>
+                  <th>시간</th>
+                  <th>핵심</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>오프닝</td><td>4분</td><td>6월 기온, 수분 보충, 초여름 추천 코스</td></tr>
+                <tr><td>2</td><td>음악 1</td><td>2분</td><td>게스트 토크 전환</td></tr>
+                <tr><td>3</td><td>토크 1</td><td>10분</td><td>모임의 시작, 챌린지 목표, 장기 비전</td></tr>
+                <tr><td>4</td><td>토크 2</td><td>10분</td><td>재미있는 에피소드, 힘든 기억, 안전의 교훈</td></tr>
+                <tr><td>5</td><td>토크 3</td><td>10분</td><td>앞으로의 방향, 개인 목표, 청취자 메시지</td></tr>
+                <tr><td>6</td><td>음악 2</td><td>2분</td><td>라이딩 팁 코너 전환</td></tr>
+                <tr><td>7</td><td>토크 4</td><td>8분</td><td>6월 라이딩 팁, 전북 추천 코스, 수분 보충</td></tr>
+                <tr><td>8</td><td>음악 3</td><td>2분</td><td>챌린지 후기 전환</td></tr>
+                <tr><td>9</td><td>토크 5</td><td>8분</td><td>기억나는 미션, 시민 후기</td></tr>
+                <tr><td>10</td><td>음악 4</td><td>1분</td><td>클로징 전환</td></tr>
+                <tr><td>11</td><td>클로징</td><td>3분</td><td>탄감자 정리, 김길중 대장님 응원, 마무리 인사</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="check-view" class="view" aria-label="확인 항목" hidden>
+          <div class="check-panel">
+            <h3>방송 전 확인</h3>
+            <label><input type="checkbox" /> 김길중 출연 정보와 호칭 확정</label>
+            <label><input type="checkbox" /> 탄감자 챌린지 신청 경로 확인</label>
+            <label><input type="checkbox" /> 보물찾기 미션과 상품권 표현 확인</label>
+            <label><input type="checkbox" /> 삽입곡 4곡 또는 대체곡 확정</label>
+            <label><input type="checkbox" /> 방송일 기준 날씨와 건강 정보 표현 확인</label>
+          </div>
+          <div class="source-note">
+            <h3>자료 메모</h3>
+            <p>특이사항 확인 중</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="panel-backdrop" class="panel-backdrop" hidden></div>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
