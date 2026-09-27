@@ -5,7 +5,7 @@ const path = require("node:path");
 const { JSDOM } = require("jsdom");
 const root = path.resolve(__dirname, "..");
 
-function start(file = "index.html", options = {}) {
+function start(file = "student-bike-app.html", options = {}) {
   const dom = new JSDOM(fs.readFileSync(path.join(root, file), "utf8"), {
     url: `https://riding-star.test/${file}#images-view`,
     runScripts: "outside-only",
@@ -82,7 +82,7 @@ test("all thumbnails select the matching image, questions, and download", () => 
 });
 
 test("memo persistence, separation, clearing, and typing do not change slides", () => {
-  const dom = start("index.html", { saved: { [memoKey(1)]: "기존 질문" } });
+  const dom = start("student-bike-app.html", { saved: { [memoKey(1)]: "기존 질문" } });
   const { window } = dom;
   const d = window.document;
   const first = d.querySelector("#gallery-memo-1");
@@ -98,7 +98,7 @@ test("memo persistence, separation, clearing, and typing do not change slides", 
   second.dispatchEvent(new window.Event("input", { bubbles: true }));
   assert.equal(window.localStorage.getItem(memoKey(1)), first.value);
   assert.equal(window.localStorage.getItem(memoKey(2)), second.value);
-  const restored = start("index.html", { saved: { [memoKey(2)]: window.localStorage.getItem(memoKey(2)) } });
+  const restored = start("student-bike-app.html", { saved: { [memoKey(2)]: window.localStorage.getItem(memoKey(2)) } });
   assert.equal(restored.window.document.querySelector("#gallery-memo-2").value, second.value);
   restored.window.close();
   first.value = "";
@@ -108,7 +108,7 @@ test("memo persistence, separation, clearing, and typing do not change slides", 
 });
 
 test("storage failure is reported while image navigation remains usable", () => {
-  const dom = start("index.html", { blockStorage: true });
+  const dom = start("student-bike-app.html", { blockStorage: true });
   const d = dom.window.document;
   assert.match(d.querySelector("#gallery-save-1").textContent, /자동 저장 불가/);
   const field = d.querySelector("#gallery-memo-1");
@@ -142,7 +142,7 @@ test("modal selection, original-size zoom, keyboard boundaries, and close state"
 });
 
 test("archive pages keep five tabs and can load and initialize the student gallery", async () => {
-  for (const file of ["velo-hyeoksin.html", "dubase.html", "kim-mikyung.html", "tangamja.html"]) {
+  for (const file of ["index.html", "velo-hyeoksin.html", "dubase.html", "kim-mikyung.html", "tangamja.html"]) {
     const dom = start(file);
     const d = dom.window.document;
     assert.equal(d.querySelectorAll(".tabs button").length, 5);
@@ -168,4 +168,63 @@ test("browser back restores the rendered episode and image tab", async () => {
   assert.ok(d.querySelector(".image-gallery"));
   assert.equal(d.querySelector("#images-view").hidden, false);
   window.close();
+});
+
+test("dawn commuter episode retains known hosts and a complete 60-minute schedule", () => {
+  const dom = start("index.html");
+  const d = dom.window.document;
+  assert.match(d.querySelector("#page-title").textContent, /새벽을 달리는 사람/);
+  assert.equal(d.querySelectorAll(".tabs button").length, 5);
+  const content = d.querySelector(".content").textContent;
+  assert.doesNotMatch(content, /스칼렛|윌리엄|○○○|2026-10-19/);
+  assert.match(content, /이름 미정/);
+  assert.match(content, /방송일시미정/);
+  assert.match(content, /본인 동의 전/);
+  const speakers = new Set([...d.querySelectorAll(".line b")].map(el => el.textContent));
+  assert.deepEqual([...speakers].sort(), ["강왕규", "게스트", "박정규", "함께"].sort());
+  const sections = [...d.querySelectorAll(".script-block")];
+  assert.equal(sections.length, 10);
+  let elapsed = 0;
+  for (const section of sections) {
+    assert.equal(Number(section.dataset.start), elapsed);
+    elapsed = Number(section.dataset.end);
+  }
+  assert.equal(elapsed, 60);
+  assert.equal(sections.filter(s => /^음악 [1-4]$/.test(s.querySelector("h3").textContent)).length, 4);
+  assert.equal(d.querySelectorAll(".line").length, 109);
+  assert.equal(d.querySelectorAll(".question-grid li").length, 30);
+  assert.equal(d.querySelectorAll(".cue-table tbody tr").length, 10);
+  assert.equal(d.querySelectorAll("#run-view tbody tr").length, 10);
+  for (const answer of d.querySelectorAll(".guest-line span")) {
+    assert.ok(["답변.", "자유롭게 자기소개.", "마지막 소감."].includes(answer.textContent));
+  }
+  for (const button of d.querySelectorAll(".tabs button")) {
+    button.click();
+    assert.equal(d.querySelectorAll(".view.active").length, 1);
+    assert.equal(d.getElementById(button.dataset.view).hidden, false);
+  }
+  dom.window.close();
+});
+
+test("all six episode menus have valid links and the correct current episode", () => {
+  const episodes = {
+    "index.html": "dawn",
+    "student-bike-app.html": "students",
+    "velo-hyeoksin.html": "velo",
+    "kim-mikyung.html": "mikyung",
+    "tangamja.html": "giljung",
+    "dubase.html": "dubase",
+  };
+  for (const [file, currentKey] of Object.entries(episodes)) {
+    const dom = start(file);
+    const d = dom.window.document;
+    const links = [...d.querySelectorAll(".episode-switch")];
+    assert.deepEqual(links.map(link => link.dataset.episodeKey), Object.values(episodes));
+    assert.equal(d.querySelectorAll('.episode-switch[aria-current="page"]').length, 1);
+    assert.equal(d.querySelector('.episode-switch[aria-current="page"]').dataset.episodeKey, currentKey);
+    for (const link of links) assert.ok(fs.existsSync(path.join(root, new URL(link.href).pathname)));
+    const ids = [...d.querySelectorAll("[id]")].map(el => el.id);
+    assert.equal(new Set(ids).size, ids.length);
+    dom.window.close();
+  }
 });
